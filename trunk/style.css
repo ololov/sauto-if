@@ -1,0 +1,10 @@
+body {font-family: Verdana, Arial; margin: 0; padding: 0; background-color: #ededed; font-size: 14px;}
+#header {background-color: #003D4C; height: 70px; border-bottom: 3px solid #333;}
+#welcome {margin: 60px auto 0 auto; width: 450px; border: 1px solid #ddd; border-radius: 10px; background-color: #fff; color: #333;}
+#welcome h1 {font-size: 18px; margin: 0; padding: 8px; border-radius: 10px 10px 0 0; border-bottom:  1px solid #000; background-color: #54697E; color: #fff; text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);}
+#welcome ul {margin: 5px 5px 5px 50px; padding: 0;}
+#welcome li {list-style-type: none; padding: 3px 0;}
+#welcome p, #welcome a {padding-left: 8px;}
+.title {font-weight: bold;}
+.copy {font-size: 11px; color: #666;}
+.copy a, .copy a:hover, .copy a:visited {color: #003D4C;}
