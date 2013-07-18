@@ -23,7 +23,7 @@ a.menu:hover {text-decoration: underline;}
 .mainMenu p {color: white; font-size: 12px; vertical-align: bottom;}
 .menuContent {bottom: 20px; position: absolute;}
 .menuContent p {font-size: 14px;}
-#menuAbout a.menu {font-size: 34px;}
+#menuAbout a.menu {font-size: 78px; font-weight: normal;}
 .menuHover {bottom: 0; position: absolute; height: 35px; opacity: 0.8;}
 .menuHover:hover {bottom: 0; position: absolute; height: auto; opacity: 1.0;}
 .mainSection {background-color: #f39c12; width: 1015px; float: left; padding: 0; color: white;}
