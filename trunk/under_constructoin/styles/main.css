@@ -23,13 +23,14 @@ background: #ecf0f1; /* Old browsers */
 #menuICar {background-color: #34495e; height: 90px; width: 305px; margin: 0 0 5px 0;}
 #menuPolCar {background-color: #c0392b; height: 90px; width: 305px; margin: 0 0 5px 0;}
 #menuNews {background: url("images/wheels.png") no-repeat #7f8c8d 140px 115px; height: 300px; width: 345px; margin: 5px 0 5px 5px;}
-#menuDelivery {background-color: #16a085; height: 40px; width: 210px; margin: 0 0 5px 0;}
+#menuDelivery {background-color: #8e44ad; height: 40px; width: 210px; margin: 0 0 5px 0;}
 #menuManual {background-color: #2ecc71; height: 40px; width: 210px; margin: 0 0 5px 0;}
 #menuPrivat24 {background: url("images/privat24.png") no-repeat #e5e5e5 18px 8px; height: 40px; width: 210px; margin: 0 0 5px 0;}
-#menuMeat {background-color: #2ecc71; height: 150px; width: 160px; margin: 0 5px 0 5px;}
-#menuHusky {background-color: #2ecc71; height: 150px; width: 160px; margin: 0 5px 0 0;}
-#menuAutopartner {background-color: #2ecc71; height: 150px; width: 160px; margin: 0 5px 0 0;}
-#menuZoreslav {background-color: #2ecc71; height: 150px; width: 160px; margin: 0 5px 0 0;}
+#menuPartners {background: url("images/partners.png") no-repeat #f1c40f -5px -4px; height: 150px; width: 30px; margin: 0 5px 0 5px;}
+#menuHusky {background: url("images/husky.png") no-repeat #ffffff 10px 8px; height: 40px; width: 180px; margin: 0 0 0 0;}
+#menuZoreslav {background: url("images/zoreslav.png") no-repeat #2ecc71; height: 40px; width: 180px; margin: 5px 0 0 0;}
+#menuMeat {background-color: #e74c3c; height: 150px; width: 160px; margin: 0 5px 0 5px;}
+#menuAutopartner {background-color: #3498db; height: 150px; width: 160px; margin: 0 5px 0 0;}
 a.menu, a.menu:focus, a.menu:active, a.menu:hover {color: white; font-weight: bold; text-decoration: none; text-transform: uppercase; font-size: 20px;}
 a.menu:hover {text-decoration: underline;}
 .mainMenu p, .mainMenu ul {color: white; font-size: 12px; vertical-align: bottom;}
@@ -43,3 +44,4 @@ h1 {font-size: 36px; text-transform: uppercase; padding: 0; margin: 0; backgroun
 .mainSection p {padding: 10px;}
 #hBlock1 {float: left; width: 315px;}
 #hBlock2 {float: left; width: 220px;}
+#hBlock3 {float: left; width: 190px;}
