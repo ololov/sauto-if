@@ -26,8 +26,8 @@ a.menu:hover {text-decoration: none; font-weight: bold;}
 #sideNews {float: right; width: 205px; padding: 15px 5px 5px 5px; border-left: dotted 1px #95a5a6; background: url("images/engine2.png") no-repeat 0 0 #ecf0f1; font-size: 12px;}
 #sideNews .date {font-weight: bold;}
 #sectionMain {width: 784px; float: left; padding: 15px 10px 10px 10px; background-color: #ecf0f1; color: #2b1b17;}
-#sectionMain a, #sectionMain a:focus, #sectionMain a:active, #sectionMain a:hover {text-decoration: underline; color: #2b1b17;}
-#sectionMain a:hover {text-decoration: none; color: #b1b1b1;}
+a, a:focus, a:active, a:hover {text-decoration: underline; color: #2b1b17;}
+a:hover {text-decoration: none; color: #b1b1b1;}
 
 
 #contentHot {border-top: solid 5px #9b59b6; background: url("images/hodova.png") no-repeat 374px -20px;}
@@ -44,6 +44,7 @@ a.menu:hover {text-decoration: none; font-weight: bold;}
 #menuAutopartner {background-color: #2980b9; width: 295px;}
 
 .itemNewsShort {padding: 0 0 5px 0; border-bottom: solid 1px #34495e; margin-bottom: 10px;}
+.itemNewsShort a {font-size: 10px;}
 
 #advPrivat24 {background: url("images/privat24.png") no-repeat #e5e5e5 5px 8px; height: 50px; width: 200px; margin: 0 0 5px 0;}
 #advHusky {background: url("images/husky.png") no-repeat #ffffff 10px 8px; height: 50px; width: 200px; margin: 0 0 5px 0;}
