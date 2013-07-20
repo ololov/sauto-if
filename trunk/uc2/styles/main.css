@@ -14,10 +14,11 @@ background: #ecf0f1; /* Old browsers */
   background-position: 0px 0px;}
 #mainWrapper {width: 1024px;  margin: 0 auto; background-color: #ecf0f1; overflow: hidden;}
 #logoMain {background: url("images/logo.png") no-repeat white; height: 188px; width: 1024px; float: left;}
-.menu {float: left; padding: 5px; opacity: 0.7; text-transform: uppercase; font-size: 14px; font-weight: bold; margin-right: 5px; background-color: #2ecc71; width: 150px; height: 30px;}
+.menu {float: left; padding: 5px; opacity: 0.5; text-transform: uppercase; font-size: 14px; margin-right: 5px; background-color: #2ecc71; width: 150px; height: 30px;}
 .menu:hover {cursor: pointer; opacity: 1.0;}
+.menuSelected {float: left; padding: 5px; text-transform: uppercase; font-size: 14px; margin-right: 5px; background-color: #2ecc71; width: 150px; height: 30px; opacity: 1.0; font-weight: bold;}
 a.menu, a.menu:focus, a.menu:active, a.menu:hover {text-decoration: none; color: white;}
-a.menu:hover {text-decoration: underline;}
+a.menu:hover {text-decoration: none; font-weight: bold;}
 .navMenu {float: left; background-color: #eeeeee; width: 1014px; padding: 5px; border-top: solid 1px #95a5a6;}
 #menuBlock1 {background: url("images/wheels.png") no-repeat #eeeeee 820px -147px;}
 #menuBlock2 {border-bottom: solid 2px #95a5a6; background: url("images/wheels.png") no-repeat #eeeeee 10px -60px;}
@@ -25,8 +26,12 @@ a.menu:hover {text-decoration: underline;}
 #sideNews {float: right; width: 198px; padding: 15px 5px 5px 5px; border-left: dotted 1px #95a5a6; background: url("images/engine2.png") no-repeat 0 0 #ecf0f1; font-size: 12px;}
 #sideNews .date {font-weight: bold;}
 #sectionMain {width: 584px; float: left; padding: 15px 5px 5px 5px; background-color: #ecf0f1; color: #2b1b17;}
+#sectionMain a, #sectionMain a:focus, #sectionMain a:active, #sectionMain a:hover {text-decoration: underline; color: #2b1b17;}
+#sectionMain a:hover {text-decoration: none; color: #b1b1b1;}
+
 
 #contentHot {border-top: solid 5px #9b59b6; background: url("images/hodova.png") no-repeat 374px -20px;}
+#contentAbout {border-top: solid 5px #1abc9c; background: url("images/krylo.png") no-repeat 374px 10px;}
 
 #menuAbout {background-color: #1abc9c;}
 #menuOrder {background-color: #2ecc71;}
