@@ -1,5 +1,5 @@
 body {height: 100%; font-family: Verdana, Arial; margin: 0; padding: 0; font-size: 14px;
-background: url("images/hodova.png") repeat #ecf0f1; /* Old browsers */
+background: url("images/bg2.png") repeat #ecf0f1; /* Old browsers */
   height: 100%;
   width: 100%;
 }
@@ -22,9 +22,9 @@ a:hover {text-decoration: none; color: #b1b1b1;}
 
 .content {padding: 15px 25px; background-color: white; color: #333; margin: 10px 5px; border-radius: 6px; border: 1px solid #ddd;}
 #contentNews {background-color: #e5e5e5; float: left; width: 260px; }
-#contentHot {background: url("images/hodova.png") no-repeat 374px -20px white;}
+#contentHot {bbackground: url("images/hodova.png") no-repeat 374px -20px white;}
 #contentHot h1 {border-bottom: solid 2px #9b59b6; padding: 0; margin: 0;}
-#contentAbout {background: url("images/krylo.png") no-repeat 374px 10px white;}
+#contentAbout {bbackground: url("images/krylo.png") no-repeat 374px 10px white;}
 #contentAbout h1 {border-bottom: solid 2px #1abc9c; padding: 0; margin: 0;}
 
 #menuAbout {border-bottom-color: #1abc9c;}
@@ -56,5 +56,5 @@ a:hover {text-decoration: none; color: #b1b1b1;}
 
 #sectionMain h1 {font-size: 20px;}
 
-#footerMain {width: 1024px; height: 60px; float: left; border-top: solid 2px #95a5a6; background: url("images/bumper.png") no-repeat 710px -68px #95a5a6;}
-.copyText {display: block; float: right; font-size: 10px; padding: 5px; color: #eeeeee;}
+#footerMain {width: 1024px; height: 60px; float: left; border-top: solid 2px #95a5a6; background: url("images/bumper.png") no-repeat 710px -68px #e5e5e5;}
+.copyText {display: block; float: right; font-size: 10px; padding: 5px; color: #333;}
