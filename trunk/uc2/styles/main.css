@@ -4,28 +4,35 @@ background: url("images/bg2.png") repeat #ecf0f1; /* Old browsers */
   width: 100%;
 }
 #mainWrapper {width: 1074px;  margin: 0 auto; background-color: transparent; overflow: hidden;}
-#logoMain {background: url("images/logo.png") no-repeat white 30px 0; height: 191px; width: 1024px; float: left;}
+#logoMain {background: url("images/logo.png") no-repeat white 30px 0; height: 191px; width: 1024px; float: left; position: relative;}
+#logoMain p.l1 {margin: 0; padding: 20px 0 12px 500px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
+#logoMain p.l2 {margin: 0; padding: 0 0 12px 600px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
+#logoMain p.l3 {margin: 0; padding: 0 0 0 700px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
 .menu {float: left; padding: 3px 15px; opacity: 0.6; font-size: 14px; margin-right: 5px; background-color: white; border-radius: 3px; border-bottom-style: solid; border-bottom-width: 5px; background-color: #ddd;}
 .menu:hover {cursor: pointer; opacity: 1.0;}
 .menuSelected {opacity: 1.0; font-weight: bold; background-color: white;}
 a.menu, a.menu:focus, a.menu:active, a.menu:hover {text-decoration: none; text-align: center;}
 a.menu:hover {text-decoration: none; font-weight: bold;}
-.navMenu {float: left; background-color: #eeeeee; width: 1014px; padding: 5px; border-top: solid 1px #95a5a6;}
+.navMenu {float: left; background-color: #eeeeee; width: 1012px; padding: 5px; border-top: solid 1px #e5e5e5; border-left: solid 1px #e5e5e5; border-right: solid 1px #e5e5e5;}
 #menuBlock1 {background: url("images/wheels.png") no-repeat #eeeeee 820px -147px;}
-#menuBlock2 {border-bottom: solid 2px #95a5a6; background: url("images/wheels.png") no-repeat #eeeeee 10px -60px;}
+#menuBlock2 {border-bottom: solid 1px #e5e5e5; background: url("images/wheels.png") no-repeat #eeeeee 10px -60px;}
 #sideAdv {float: left; width: 210px; padding: 15px 5px 5px 5px; border-right: dotted 1px #95a5a6; background: url("images/accum.png") no-repeat 120px 60px #ecf0f1;}
-#sideNews {padding: 15px 5px 5px 5px; border: dotted 1px #95a5a6; border-radius: 6px; background: url("images/engine2.png") no-repeat 0 0 #eee; font-size: 12px; margin: 10px 5px 10px 5px;}
-#sideNews .date {font-weight: bold;}
+#sideNews {padding: 15px 10px 15px 10px; border: dotted 1px #95a5a6; border-radius: 6px; background: url("images/engine2.png") no-repeat 0 0 #fefefe; font-size: 12px; margin: 10px 5px 10px 5px;}
+#sideNews .date {font-weight: bold; display: block; padding-bottom: 3px;}
 #sectionMain {width: 764px; float: left; padding: 0; background-color: #e5e5e5; color: #333; margin: 0;}
 a, a:focus, a:active, a:hover {text-decoration: underline; color: #2b1b17;}
 a:hover {text-decoration: none; color: #b1b1b1;}
 
 .content {padding: 15px 25px; background-color: white; color: #333; margin: 10px 5px; border-radius: 6px; border: 1px solid #ddd;}
-#contentNews {background-color: #e5e5e5; float: left; width: 260px; }
-#contentHot {bbackground: url("images/hodova.png") no-repeat 374px -20px white;}
+#contentNews {background-color: #e5e5e5; float: left; width: 260px; color: navy;}
+#contentHot {}
 #contentHot h1 {border-bottom: solid 2px #9b59b6; padding: 0; margin: 0;}
-#contentAbout {bbackground: url("images/krylo.png") no-repeat 374px 10px white;}
+#contentAbout {;}
 #contentAbout h1 {border-bottom: solid 2px #1abc9c; padding: 0; margin: 0;}
+#contentDelivery {}
+#contentDelivery h1 {border-bottom: solid 2px #34495e; padding: 0; margin: 0;}
+#sectionMain h2 {font-size: 16px; font-weight: bold;}
+#sectionMain h3 {font-size: 14px; font-weight: bold;}
 
 #menuAbout {border-bottom-color: #1abc9c;}
 #menuOrder {border-bottom-color: #2ecc71;}
@@ -37,13 +44,13 @@ a:hover {text-decoration: none; color: #b1b1b1;}
 #menuPolcar {border-bottom-color: #d35400; width: 295px;}
 #menuAutopartner {border-bottom-color: #2980b9; width: 295px;}
 
-#socialBlock {width: 50px; height: 500px; float: right; position: relative; background: transparent;}
-.social {width: 40px; height: 30px; background-color: navy; color: white; opacity: 0.8; font-weight: bold;}
-.social:hover {opacity: 1.0; width: 47px; cursor: pointer;}
-#socialFB {position: absolute; top: 300px;}
-#socialVK {position: absolute; top: 333px;}
-#socialO {position: absolute; top: 366px;}
-#socialt {position: absolute; top: 399px;}
+#socialBlock {width: 49px; height: 500px; float: right; position: relative; background: transparent;}
+.social {position: absolute; width: 40px; height: 40px; background-color: #fefefe; color: white; opacity: 0.8; font-weight: bold; text-indent: -9999px; border: 1px #777; border-bottom-style: solid; border-top-style: solid; border-right-style: solid; border-top-right-radius: 3px; border-bottom-right-radius: 3px;}
+.social:hover {opacity: 1.0;  cursor: pointer;}
+#socialFB {top: 100px; background: url("images/facebook.png") no-repeat #fefefe 2px 3px;}
+#socialVK {top: 154px; background: url("images/vk.png") no-repeat #fefefe 2px 3px;}
+#socialO {top: 208px; background: url("images/ok.png") no-repeat #fefefe 2px 3px;}
+#socialt {top: 262px; background: url("images/tw.png") no-repeat #fefefe 2px 3px;}
 
 .itemNewsShort {padding: 0 0 5px 0; border-bottom: solid 1px #34495e; margin-bottom: 10px;}
 .itemNewsShort a {font-size: 10px;}
@@ -56,5 +63,9 @@ a:hover {text-decoration: none; color: #b1b1b1;}
 
 #sectionMain h1 {font-size: 20px;}
 
+#phone {margin-top: 10px; padding: 7px 15px; color: white; position: absolute; font-size: 12px; font-weight: bold; right: -42px; border: 1px solid #ddd; border-radius: 5px;  background: url("images/phone.png") no-repeat #34495e 110px 8px;}
+
 #footerMain {width: 1024px; height: 60px; float: left; border-top: solid 2px #95a5a6; background: url("images/bumper.png") no-repeat 710px -68px #e5e5e5;}
 .copyText {display: block; float: right; font-size: 10px; padding: 5px; color: #333;}
+table.data tr td {background-color: #eee; padding: 5px;}
+table.data tr.odd td {background-color: #e5e5e5;}
