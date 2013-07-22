@@ -4,7 +4,7 @@ background: url("images/bg2.png") repeat #ecf0f1; /* Old browsers */
   width: 100%;
 }
 #mainWrapper {width: 1074px;  margin: 0 auto; background-color: transparent; overflow: hidden;}
-#logoMain {background: url("images/logo.png") no-repeat white; height: 188px; width: 1024px; float: left;}
+#logoMain {background: url("images/logo.png") no-repeat white 30px 0; height: 191px; width: 1024px; float: left;}
 .menu {float: left; padding: 3px 15px; opacity: 0.6; font-size: 14px; margin-right: 5px; background-color: white; border-radius: 3px; border-bottom-style: solid; border-bottom-width: 5px; background-color: #ddd;}
 .menu:hover {cursor: pointer; opacity: 1.0;}
 .menuSelected {opacity: 1.0; font-weight: bold; background-color: white;}
