@@ -63,7 +63,7 @@ a:hover {text-decoration: none; color: #b1b1b1;}
 
 #sectionMain h1 {font-size: 20px;}
 
-#phone {margin-top: 10px; padding: 7px 15px; color: white; position: absolute; font-size: 12px; font-weight: bold; right: -42px; border: 1px solid #ddd; border-radius: 5px;  background: url("images/phone.png") no-repeat #34495e 110px 8px;}
+#phone {width: 120px; margin-top: 10px; padding: 7px 15px; color: white; position: absolute; font-size: 12px; font-weight: bold; right: -42px; border: 1px solid #ddd; border-radius: 5px; background: url("images/phone.png") no-repeat #34495e; background-position: right top;}
 
 #footerMain {width: 1024px; height: 60px; float: left; border-top: solid 2px #95a5a6; background: url("images/bumper.png") no-repeat 710px -68px #e5e5e5;}
 .copyText {display: block; float: right; font-size: 10px; padding: 5px; color: #333;}
