@@ -61,7 +61,7 @@ a:hover {text-decoration: none; color: #b1b1b1;}
 #advMeat {background-color: #e74c3c; height: 90px; width: 160px; margin: 0 0 5px 0;}
 #advAutopartner {background-color: #cccccc; height: 90px; width: 160px; margin: 0 0 5px 0;}
 
-#sectionMain h1 {font-size: 20px;}
+#sectionMain h1 {font-size: 20px; padding-top: 8px;}
 
 #phone {width: 120px; margin-top: 10px; padding: 7px 15px; color: white; position: absolute; font-size: 12px; font-weight: bold; right: -42px; border: 1px solid #ddd; border-radius: 5px; background: url("images/phone.png") no-repeat 110px 8px #34495e;}
 
