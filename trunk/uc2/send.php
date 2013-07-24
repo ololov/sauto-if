@@ -1,7 +1,7 @@
 <?php 
 
 $to = "gzoreslav@gmail.com"; 
-$order = "ICARS13";
+$order = "ICARS14";
 $subject = "SAUTO - iCars order #".$order; 
 $cur_date = date('r');
 echo $cur_date;
@@ -13,9 +13,7 @@ $message = '
         <title>SAUTO - iCars order #'.$order.'</title> 
     </head> 
     <body> 
-        <h1>SAUTO - iCars order #'.$order.'</h1>
-        <h2>Деталі замовлення</h2>
-        <table>
+        <table style="border: 1px #333 solid; background-color: #eee">
             <tr>
                 <td colspan="2" style="padding: 3px;"><b>Замовлення #'.$order.'</b></td>
             </tr>
@@ -32,19 +30,18 @@ $message = '
                 <td style="padding: 3px;">gzoreslav@gmail.com</td>
             </tr>
             <tr>
-                <td style="padding: 3px;">Телефон</td>
+                <td style="padding: 3px;">Телефон:</td>
                 <td style="padding: 3px;">+380967516185</td>
             </tr>
             <tr>
                 <td style="padding: 3px;">Замовлення:</td>
-                <td style="padding: 3px;">(див. вкладенний файл '.$filename.') abo <a href="http://www.sauto.if.ua/uc2/orders/'.$filename.'">скачайте</a></td>
+                <td style="padding: 3px;">(див. вкладенний файл '.$filename.') abo <a href="http://www.sauto.if.ua/uc2/orders/'.$filename.'">скачати</a></td>
             </tr>
             <tr>
                 <td style="padding: 3px;">Примітки:</td>
-                <td style="padding: 3px;">Вишліть мені детальки пліз!!! :) Просто перевірка чи працює висилання)))))))))) з файлом заатаченим</td>
+                <td style="padding: 3px;">Просто перевірка чи працює висилання з файлом заатаченим</td>
             </tr>
         </table>
-        <hr/>
         <p>Замовлено '.$cur_date.'</p>
         <p>Детально на сайті <a href="http://www.sauto.if.ua/uc2/order_check?order='.$order.'">http://www.sauto.if.ua/uc2/order_check?order='.$order.'</a></p>
         <p>&copy; SAUTO 2013</p>
