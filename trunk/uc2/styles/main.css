@@ -8,7 +8,7 @@ bbackground: url("images/bg.png") repeat ;
 #logoMain p.l1 {margin: 0; padding: 20px 0 12px 500px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
 #logoMain p.l2 {margin: 0; padding: 0 0 12px 600px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
 #logoMain p.l3 {margin: 0; padding: 0 0 0 700px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
-.menu {float: left; padding: 3px 15px 3px 0; opacity: 0.6; font-size: 14px; margin-right: 5px; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: transparent;}
+.menu {float: left; padding: 3px 0 3px 0; opacity: 0.6; font-size: 14px; margin-right: 20px; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: transparent;}
 .menu:hover {cursor: pointer; opacity: 1.0;}
 .menuSelected {opacity: 1.0; font-weight: bold; background-color: white; border-bottom-color: #e74c3c;}
 a.menu, a.menu:focus, a.menu:active, a.menu:hover {text-decoration: none; text-align: center; font-weight: bold;}
