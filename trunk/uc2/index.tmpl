@@ -6,7 +6,12 @@
         <link rel="stylesheet" type="text/css" href="styles/main.css">
     </head>
     <body>
-        <?=$social_fb?>
-<p>la-la</p>
+        <? include('socialinit.tmpl'); ?>
+        <div id="mainWrapper">
+            <? include('header.tmpl'); ?>
+            <? include('mainmenu.tmpl'); ?>
+            <? include($content_tmpl.'.tmpl'); ?>
+            <? include('footer.tmpl'); ?>
+        </div>
     </body>
 </html>

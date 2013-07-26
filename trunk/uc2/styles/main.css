@@ -8,29 +8,44 @@ bbackground: url("images/bg.png") repeat ;
 #logoMain p.l1 {margin: 0; padding: 20px 0 12px 500px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
 #logoMain p.l2 {margin: 0; padding: 0 0 12px 600px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
 #logoMain p.l3 {margin: 0; padding: 0 0 0 700px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
-.menu {float: left; padding: 3px 0 3px 0; opacity: 0.6; font-size: 14px; margin-right: 20px; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: transparent;}
-.menu:hover {cursor: pointer; opacity: 1.0;}
-.menuSelected {opacity: 1.0; font-weight: bold; background-color: white; border-bottom-color: #e74c3c;}
-a.menu, a.menu:focus, a.menu:active, a.menu:hover {text-decoration: none; text-align: center; font-weight: bold;}
-a.menu:hover {text-decoration: none; border-bottom-color: #e74c3c;}
-.navMenu {float: left; width: 1012px; bborder-top: solid 1px #e5e5e5; bborder-left: solid 1px #e5e5e5; bborder-right: solid 1px #e5e5e5;}
+
+.navMenu .menu {float: left; padding: 3px 0 3px 0; opacity: 0.6; font-size: 14px; margin-right: 20px; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: transparent;}
+.navMenu .menu:hover {cursor: pointer; opacity: 1.0;}
+.navMenu .menuSelected {opacity: 1.0; font-weight: bold; background-color: white; border-bottom-color: #e74c3c;}
+.navMenu a.menu, .navMenu a.menu:focus, .navMenu a.menu:active, .navMenu a.menu:hover {text-decoration: none; text-align: center; font-weight: bold;}
+.navMenu a.menu:hover {text-decoration: none; border-bottom-color: #e74c3c;}
+.navMenu {float: left; width: 1012px;}
+
+#subMenu .menu {float: left; padding: 3px 0 3px 0; opacity: 0.6; font-size: 14px; margin-right: 20px; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: transparent;}
+#subMenu .menu:hover {cursor: pointer; opacity: 1.0;}
+#subMenu .menuSelected {opacity: 1.0; font-weight: bold; background-color: white; border-bottom-color: #e74c3c;}
+#subMenu a.menu, #subMenu a.menu:focus, #subMenu a.menu:active, #subMenu a.menu:hover {text-decoration: none; text-align: center; font-weight: bold; margin-right: 0; margin-left: 20px; border-bottom-width: 2px;}
+#subMenu a.menu:hover {text-decoration: none; border-bottom-color: #e74c3c;}
+#subMenu {float: right; margin-bottom: 12px; margin-top: 3px;}
+
 #menuBlock1 {bbackground: url("images/wheels.png") no-repeat #eeeeee 820px -147px;}
 #menuBlock2 {bborder-bottom: solid 1px #e5e5e5; bbackground: url("images/wheels.png") no-repeat #eeeeee 10px -60px;}
 #sideAdv {float: left; width: 210px; padding: 15px 5px 5px 5px; border-right: dotted 1px #95a5a6; background: url("images/accum.png") no-repeat 120px 60px #ecf0f1;}
 #sideNews {padding: 15px 10px 15px 10px; bborder: dotted 1px #95a5a6; border-radius: 6px; background: url("images/engine2.png") no-repeat 0 0; font-size: 12px; margin: 26px 5px 10px 5px;}
 #sideNews .date {font-weight: bold; display: block; padding-bottom: 3px;}
-#sectionMain {width: 764px; float: left; padding: 0; bbackground-color: #e5e5e5; color: #333; margin: 0;}
+#sectionMain {width: 764px; float: left; padding: 0; color: #333; margin: 0;}
+#sectionMain2 {width: 1024px; float: left; padding: 0; color: #333; margin: 0;}
+
 a, a:focus, a:active, a:hover {text-decoration: underline; color: #2b1b17;}
 a:hover {text-decoration: none; color: #b1b1b1;}
 
 .content {padding: 15px 25px 15px 0; background-color: white; color: #333; margin: 10px 0; bborder-radius: 6px; bborder: 1px solid #ddd;}
+.content h1 {margin: 0 0 6px 0;}
 #contentNews {bbackground-color: #e5e5e5; float: left; width: 260px; color: #333;}
 #contentHot {}
-#contentHot h1 {border-bottom: solid 2px #e74c3c; padding: 0; margin: 0;}
+#contentHot h1 {border-bottom: solid 2px #e74c3c; padding: 0;}
 #contentAbout {;}
-#contentAbout h1 {border-bottom: solid 2px #e74c3c; padding: 0; margin: 0;}
+#contentAbout h1 {border-bottom: solid 2px #e74c3c; padding: 0;}
 #contentDelivery {}
-#contentDelivery h1 {border-bottom: solid 2px #e74c3c; padding: 0; margin: 0;}
+#contentDelivery h1 {border-bottom: solid 2px #e74c3c; padding: 0;}
+#contentArticles {;}
+#contentArticles h1 {border-bottom: solid 2px #e74c3c; padding: 0;}
+
 #sectionMain h2 {font-size: 16px; font-weight: bold;}
 #sectionMain h3 {font-size: 14px; font-weight: bold;}
 
@@ -54,6 +69,12 @@ a:hover {text-decoration: none; color: #b1b1b1;}
 
 .itemNewsShort {padding: 10px 5px 5px 10px; border: solid 1px #ddd; margin-bottom: 10px; border-radius: 6px;}
 .itemNewsShort a {font-size: 10px;}
+
+.itemNewsShort2 {padding: 0 5px 10px 0; margin: 10px 0 25px 0;}
+.itemNewsShort2 a {font-size: 10px; margin-top: 6px;}
+.itemNewsShort2 a, .itemNewsShort2 span {display: block;}
+.itemNewsShort2 span {font-weight: bold; margin-bottom: 6px;}
+
 .gradient {
     background: #fff; /* Для старых браузров */
     background: -moz-linear-gradient(top, #fff, #f5f5f5); /* Firefox 3.6+ */

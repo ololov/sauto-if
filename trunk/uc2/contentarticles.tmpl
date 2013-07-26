@@ -1,0 +1,19 @@
+<!-- Articles content template (short view and pagination) -->
+
+        <div class="content" id="contentArticles">
+                <? if ($_GET['article'] == '') { ?>
+                    <div class="fb-like" data-href="http://sauto.if.ua/uc2/articles.php" data-send="true" data-width="600" data-show-faces="true"></div>
+                    <header><h1>Статті</h1></header>
+                    <? foreach ($articles as $article) { ?>
+                        <article class="itemNewsShort2">
+                            <? include('articles/'.$article.'_short.htm'); ?>
+                        </article>
+                    <? } 
+                } else { ?>
+                        <div class="fb-like" data-href="http://sauto.if.ua/uc2/articles.php?article=<?=$_GET['article']?>" data-send="true" data-width="600" data-show-faces="true"></div>
+                        <? include('articles/'.$_GET['article'].'.htm'); ?>
+                        <a href="articles.php">Всі статті</a>
+                <? } ?>
+        </div>
+
+<!-- Articles content template (short view and pagination) -->
