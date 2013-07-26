@@ -50,7 +50,8 @@ a:hover {text-decoration: none; color: #b1b1b1;}
 
 #sectionMain2 {width: 860px; float: left; padding: 0; color: #333; margin: 0;}
 
-#contentPartners {width: 160px; float: left;}
+#contentPartners {width: 150px; float: left; padding-right: 10px;}
+#contentPartners a {display: block; width: 120px;}
 
 #amenuAbout {border-bottom-color: #1abc9c;}
 #amenuOrder {border-bottom-color: #2ecc71;}

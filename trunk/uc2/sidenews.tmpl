@@ -1,10 +1,14 @@
 <!-- Side News (5 last articles) -->
 
     <aside id="sideNews">
-        <? foreach ($articles as $article) { ?>
-            <article class="itemNewsShort gradient">
-                <? include('articles/'.$article.'_short.htm'); ?>
-            </article>
+        <? $i = 0;
+        foreach ($articles as $article) { 
+            $i++;
+            if ($i <= $_side_articles_count) { ?>
+                <article class="itemNewsShort gradient">
+                    <? include('articles/'.$article.'_short.htm'); ?>
+                </article>
+            <? } ?>
         <? } ?>
         <a href="articles.php">всі статті</a>
     </aside>
