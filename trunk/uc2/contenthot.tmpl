@@ -3,7 +3,8 @@
         <div class="content" id="contentHot">
             <div class="fb-like" data-href="http://sauto.if.ua/uc2/index.htm" data-send="true" data-width="600" data-show-faces="true"></div>
             <header><h1>Гарячі пропозиції</h1></header>
-                <? if ($_GET['view'] == 'grid') {
+                <? include('contentpromo.tmpl');
+                if ($_GET['view'] == 'grid') {
                     include('contenthot_viewgrid.tmpl');
                 } else {
                     include('contenthot_viewlist.tmpl');
