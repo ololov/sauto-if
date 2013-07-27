@@ -26,7 +26,7 @@ bbackground: url("images/bg.png") repeat ;
 #menuBlock1 {bbackground: url("images/wheels.png") no-repeat #eeeeee 820px -147px;}
 #menuBlock2 {bborder-bottom: solid 1px #e5e5e5; bbackground: url("images/wheels.png") no-repeat #eeeeee 10px -60px; border-bottom: 1px solid #e74c3c;}
 #sideAdv {float: left; width: 210px; padding: 15px 5px 5px 5px; border-right: dotted 1px #95a5a6; background: url("images/accum.png") no-repeat 120px 60px #ecf0f1;}
-#sideNews {padding: 15px 10px 15px 10px; bborder: dotted 1px #95a5a6; border-radius: 6px; background: url("images/engine2.png") no-repeat 0 0; font-size: 12px; margin: 26px 5px 10px 5px;}
+#sideNews {padding: 12px 10px 15px 10px; bborder: dotted 1px #95a5a6; border-radius: 6px; background: url("images/engine2.png") no-repeat 0 0; font-size: 12px; margin: 0 5px 10px 5px;}
 #sideNews .date {font-weight: bold; display: block; padding-bottom: 3px;}
 
 a, a:focus, a:active, a:hover {text-decoration: underline; color: #2b1b17;}
@@ -34,7 +34,7 @@ a:hover {text-decoration: none; color: #b1b1b1;}
 
 .content {padding: 15px 25px 15px 0; background-color: white; color: #333; margin: 10px 0; bborder-radius: 6px; bborder: 1px solid #ddd;}
 .content h1 {margin: 0 0 6px 0;}
-#contentNews {bbackground-color: #e5e5e5; float: left; width: 260px; color: #333;}
+#contentNews {bbackground-color: #e5e5e5; float: left; width: 250px; color: #333;}
 #contentHot {}
 #contentHot h1 {border-bottom: solid 2px #e74c3c; padding: 0;}
 #contentAbout {;}
@@ -48,10 +48,23 @@ a:hover {text-decoration: none; color: #b1b1b1;}
 #sectionMain h2 {font-size: 16px; font-weight: bold;}
 #sectionMain h3 {font-size: 14px; font-weight: bold;}
 
-#sectionMain2 {width: 850px; float: left; padding: 0; color: #333; margin: 0;}
+#sectionMain2 {width: 840px; float: left; padding: 0; color: #333; margin: 0;}
 
-#contentPartners {width: 150px; float: left; padding-right: 20px;}
+#contentPartners {width: 140px;
+float: left;
+padding-right: 20px;
+padding: 5px 7px 5px 7px;
+border-radius: 5px;
+margin: 10px 20px 5px 0;
+border: solid 1px #ddd;}
 #contentPartners a {display: block; width: 140px; margin-bottom: 12px; text-indent: -9999px; border-bottom: 1px dotted #ddd; padding-bottom: 6px;}
+span.sideHeader {text-align: center;
+color: white;
+display: block;
+font-size: 12px;
+padding: 3px;
+background-color: #e74c3c;
+margin-bottom: 20px;}
 
 #amenuAbout {border-bottom-color: #1abc9c;}
 #amenuOrder {border-bottom-color: #2ecc71;}
@@ -90,6 +103,19 @@ a:hover {text-decoration: none; color: #b1b1b1;}
     background: -o-linear-gradient(top, #fff, #f5f5f5); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #fff, #f5f5f5); /* IE10 */
     background: linear-gradient(top, #fff, #f5f5f5); /* CSS3 */ 
+}
+
+.gradientH {
+    background: #fff; /* Для старых браузров */
+    background: -moz-linear-gradient(right, #fff, #f5f5f5); /* Firefox 3.6+ */
+    /* Chrome 1-9, Safari 4-5 */
+    background: -webkit-gradient(linear, left top, right top, 
+                color-stop(0%,#fff), color-stop(100%,#f5f5f5));
+    /* Chrome 10+, Safari 5.1+ */
+    background: -webkit-linear-gradient(right, #fff, #f5f5f5);
+    background: -o-linear-gradient(right, #fff, #f5f5f5); /* Opera 11.10+ */
+    background: -ms-linear-gradient(right, #fff, #f5f5f5); /* IE10 */
+    background: linear-gradient(right, #fff, #f5f5f5); /* CSS3 */ 
 }
 
 #advPrivat24 {background: url("images/privat24.png") no-repeat #e5e5e5 5px 8px; height: 50px; width: 200px; margin: 0 0 5px 0;}
