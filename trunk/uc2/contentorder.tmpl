@@ -1,9 +1,14 @@
 <!-- About content template -->
 
                 <div class="content" id="contentOrder">
-                    <div class="fb-like" data-href="http://sauto.if.ua/uc2/about.htm" data-send="true" data-width="600" data-show-faces="true"></div>
+                    <div class="fb-like" data-href="<?=curPageURL()?>" data-send="true" data-width="600" data-show-faces="true"></div>
                     <header><h1><?=$_order_titles[$order_index]?></h1></header>
-                        <p>Order form</p>
+                        <div class="orderForm">
+                            <form action="orderresult.php">
+                                <input type="hidden" name="order" value="<?=$_GET['order']?>">
+                                <input type="submit" value="Зробити замовлення">
+                            </form>
+                        </div>
                 </div>
 
 <!-- About content template -->

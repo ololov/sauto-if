@@ -44,14 +44,14 @@ a:hover {text-decoration: none; color: #b1b1b1;}
 #contentArticles {;}
 #contentArticles h1 {border-bottom: solid 2px #e74c3c; padding: 0;}
 
-#sectionMain {width: 600px; float: left; padding: 0; color: #333; margin: 0;}
+#sectionMain {width: 590px; float: left; padding: 0; color: #333; margin: 0;}
 #sectionMain h2 {font-size: 16px; font-weight: bold;}
 #sectionMain h3 {font-size: 14px; font-weight: bold;}
 
-#sectionMain2 {width: 860px; float: left; padding: 0; color: #333; margin: 0;}
+#sectionMain2 {width: 850px; float: left; padding: 0; color: #333; margin: 0;}
 
-#contentPartners {width: 150px; float: left; padding-right: 10px;}
-#contentPartners a {display: block; width: 120px;}
+#contentPartners {width: 150px; float: left; padding-right: 20px;}
+#contentPartners a {display: block; width: 140px; margin-bottom: 12px; text-indent: -9999px; border-bottom: 1px dotted #ddd; padding-bottom: 6px;}
 
 #amenuAbout {border-bottom-color: #1abc9c;}
 #amenuOrder {border-bottom-color: #2ecc71;}
@@ -96,7 +96,15 @@ a:hover {text-decoration: none; color: #b1b1b1;}
 #advHusky {background: url("images/husky.png") no-repeat #ffffff 10px 8px; height: 50px; width: 200px; margin: 0 0 5px 0;}
 #advZoreslav {background: url("images/zoreslav.png") no-repeat #ffffff; height: 50px; width: 190px; margin: 0 0 5px 0;}
 #advMeat {background-color: #e74c3c; height: 90px; width: 160px; margin: 0 0 5px 0;}
-#advAutopartner {background-color: #cccccc; height: 90px; width: 160px; margin: 0 0 5px 0;}
+
+#advAutopartner {background: url("images/autopartner.jpg") no-repeat; height: 70px;}
+#advIntercars {background: url("images/intercars.png") no-repeat; height: 37px;}
+#advPolcar {background: url("images/polcar.jpg") no-repeat; height: 31px;}
+#advIntervito {background: url("images/intervito.jpg") no-repeat; height: 31px;}
+#advVemapol {background: url("images/vemapol.png") no-repeat; height: 61px;}
+#advMotogama {background: url("images/motogama.jpg") no-repeat; height: 30px;}
+#advAutoGietka {background: url("images/autogietka.gif") no-repeat; height: 27px;}
+#advEMoto {background: url("images/emoto.png") no-repeat; height: 27px;}
 
 #sectionMain h1 {font-size: 20px; padding-top: 8px;}
 
