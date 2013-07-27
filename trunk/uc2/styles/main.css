@@ -24,7 +24,7 @@ bbackground: url("images/bg.png") repeat ;
 #subMenu {float: right; margin-bottom: 12px; margin-top: 3px;}
 
 #menuBlock1 {bbackground: url("images/wheels.png") no-repeat #eeeeee 820px -147px;}
-#menuBlock2 {bborder-bottom: solid 1px #e5e5e5; bbackground: url("images/wheels.png") no-repeat #eeeeee 10px -60px; border-bottom: 1px solid #e74c3c;}
+#menuBlock2 {bborder-bottom: solid 1px #e5e5e5; bbackground: url("images/wheels.png") no-repeat #eeeeee 10px -60px; border-bottom: 1px solid #e74c3c; padding-bottom: 3px;}
 #sideAdv {float: left; width: 210px; padding: 15px 5px 5px 5px; border-right: dotted 1px #95a5a6; background: url("images/accum.png") no-repeat 120px 60px #ecf0f1;}
 #sideNews {padding: 12px 10px 15px 10px; bborder: dotted 1px #95a5a6; border-radius: 6px; background: url("images/engine2.png") no-repeat 0 0; font-size: 12px; margin: 0 5px 10px 5px;}
 #sideNews .date {font-weight: bold; display: block; padding-bottom: 3px;}
