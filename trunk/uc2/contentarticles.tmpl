@@ -1,8 +1,8 @@
 <!-- Articles content template (short view and pagination) -->
 
         <div class="content" id="contentArticles">
+            <div class="fb-like" data-href="<?=curPageURL()?>" data-send="true" data-width="600" data-show-faces="true"></div>
                 <? if ($_GET['article'] == '') { ?>
-                    <div class="fb-like" data-href="<?=curPageURL()?>" data-send="true" data-width="600" data-show-faces="true"></div>
                     <header><h1>Статті</h1></header>
                     <? foreach ($articles as $article) { ?>
                         <article class="itemNewsShort2">
@@ -10,9 +10,9 @@
                         </article>
                     <? } 
                 } else { ?>
-                        <div class="fb-like" data-href="http://sauto.if.ua/uc2/articles.php?article=<?=$_GET['article']?>" data-send="true" data-width="600" data-show-faces="true"></div>
+                        <p><a href="articles.php">Всі статті</a> Попередня: <a href="#">стаття 1</a>  Наступна: <a href="#">стаття 1</a></p>
                         <? include('articles/'.$_GET['article'].'.htm'); ?>
-                        <a href="articles.php">Всі статті</a>
+                        <p><a href="articles.php">Всі статті</a> Попередня: <a href="#">стаття 1</a>  Наступна: <a href="#">стаття 1</a></p>
                 <? } ?>
         </div>
 
