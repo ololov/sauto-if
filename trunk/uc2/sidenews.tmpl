@@ -4,12 +4,13 @@
         <span class="sideHeader">Цікаво знати</span>
         <? $i = 0;
         foreach ($articles as $article) { 
-            $i++;
-            if ($i <= $_side_articles_count) { ?>
+            if ($i <= $_side_articles_count - 1) { ?>
                 <article class="itemNewsShort gradient">
                     <? include('articles/'.$article.'_short.htm'); ?>
+                    <a href="articles.php?article=<?=$i?>"><?=$_read_more?></a>
                 </article>
-            <? } ?>
+            <? $i++;
+            } ?>
         <? } ?>
         <a href="articles.php">всі статті</a>
     </aside>

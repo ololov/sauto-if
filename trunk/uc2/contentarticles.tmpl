@@ -2,17 +2,27 @@
 
         <div class="content" id="contentArticles">
             <div class="fb-like" data-href="<?=curPageURL()?>" data-send="true" data-width="600" data-show-faces="true"></div>
-                <? if ($_GET['article'] == '') { ?>
+                <? if ($_GET['article'] == '') {
+                    $article_index = -1; ?>
                     <header><h1>Статті</h1></header>
-                    <? foreach ($articles as $article) { ?>
+                    <? $i = 0;
+                    foreach ($articles as $article) { ?>
                         <article class="itemNewsShort2">
                             <? include('articles/'.$article.'_short.htm'); ?>
+                            <a href="articles.php?article=<?=$i?>"><?=$_read_more?></a>
                         </article>
-                    <? } 
-                } else { ?>
-                        <p><a href="articles.php">Всі статті</a> Попередня: <a href="#">стаття 1</a>  Наступна: <a href="#">стаття 1</a></p>
-                        <? include('articles/'.$_GET['article'].'.htm'); ?>
-                        <p><a href="articles.php">Всі статті</a> Попередня: <a href="#">стаття 1</a>  Наступна: <a href="#">стаття 1</a></p>
+                    <? $i++;
+                    } 
+                } else { 
+                        $article_index = $_GET['article'];
+                        $prev = $article_index - 1;
+                        $next = $article_index + 1;
+                        if ($next >= count($articles)) { $next = 0; }
+                        if ($prev < 0) { $prev = count($articles) - 1; }
+                        ?>
+                        <div class="pageMenu"><a href="articles.php">Всі статті</a> | Попередня: <a href="articles.php?article=<?=$prev?>"><?=$articles_title[$prev]?></a> | Наступна: <a href="articles.php?article=<?=$next?>"><?=$articles_title[$next]?></a></div>
+                        <? include('articles/'.$articles[$article_index].'.htm'); ?>
+                        <div class="pageMenu"><a href="articles.php">Всі статті</a> | Попередня: <a href="articles.php?article=<?=$prev?>"><?=$articles_title[$prev]?></a> | Наступна: <a href="articles.php?article=<?=$next?>"><?=$articles_title[$next]?></a></div>
                 <? } ?>
         </div>
 
