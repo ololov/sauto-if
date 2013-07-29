@@ -1,0 +1,144 @@
+body {height: 100%; font-family: Verdana, Arial; margin: 0; padding: 0; font-size: 14px;
+bbackground: url("images/bg.png") repeat ; 
+  height: 100%;
+  width: 100%;
+}
+#mainWrapper {width: 1074px;  margin: 0 auto; background-color: transparent; overflow: hidden;}
+#logoMain {background: url("images/logo.png") no-repeat white 30px 0; height: 191px; width: 1024px; float: left; position: relative;}
+#logoMain p.l1 {margin: 0; padding: 20px 0 12px 500px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
+#logoMain p.l2 {margin: 0; padding: 0 0 12px 600px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
+#logoMain p.l3 {margin: 0; padding: 0 0 0 700px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
+
+.navMenu .menu {float: left; padding: 3px 0 3px 0; opacity: 0.6; font-size: 14px; margin-right: 20px; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: transparent;}
+.navMenu .menu:hover {cursor: pointer; opacity: 1.0;}
+.navMenu .menuSelected {opacity: 1.0; font-weight: bold; background-color: white; border-bottom-color: #e74c3c;}
+.navMenu a.menu, .navMenu a.menu:focus, .navMenu a.menu:active, .navMenu a.menu:hover {text-decoration: none; text-align: center; font-weight: bold;}
+.navMenu a.menu:hover {text-decoration: none; border-bottom-color: #e74c3c;}
+.navMenu {float: left; width: 1012px;}
+
+#subMenu .menu {float: left; padding: 3px 0 3px 0; opacity: 0.6; font-size: 14px; margin-right: 20px; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: transparent;}
+#subMenu .menu:hover {cursor: pointer; opacity: 1.0;}
+#subMenu .menuSelected {opacity: 1.0; font-weight: bold; background-color: white; border-bottom-color: #e74c3c;}
+#subMenu a.menu, #subMenu a.menu:focus, #subMenu a.menu:active, #subMenu a.menu:hover {text-decoration: none; text-align: center; font-weight: bold; margin-right: 0; margin-left: 20px; border-bottom-width: 2px;}
+#subMenu a.menu:hover {text-decoration: none; border-bottom-color: #e74c3c;}
+#subMenu {float: right; margin-bottom: 12px; margin-top: 3px;}
+
+#menuBlock1 {bbackground: url("images/wheels.png") no-repeat #eeeeee 820px -147px;}
+#menuBlock2 {bborder-bottom: solid 1px #e5e5e5; bbackground: url("images/wheels.png") no-repeat #eeeeee 10px -60px; border-bottom: 1px solid #e74c3c; padding-bottom: 3px;}
+#sideAdv {float: left; width: 210px; padding: 15px 5px 5px 5px; border-right: dotted 1px #95a5a6; background: url("images/accum.png") no-repeat 120px 60px #ecf0f1;}
+#sideNews {padding: 12px 10px 15px 10px; bborder: dotted 1px #95a5a6; border-radius: 6px; background: url("images/engine2.png") no-repeat 0 0; font-size: 12px; margin: 0 5px 10px 5px;}
+#sideNews .date {font-weight: bold; display: block; padding-bottom: 3px;}
+
+a, a:focus, a:active, a:hover {text-decoration: underline; color: #2b1b17;}
+a:hover {text-decoration: none; color: #b1b1b1;}
+
+.content {padding: 15px 25px 15px 0; background-color: white; color: #333; margin: 10px 0; bborder-radius: 6px; bborder: 1px solid #ddd;}
+.content h1 {margin: 0 0 6px 0;}
+#contentNews {bbackground-color: #e5e5e5; float: left; width: 250px; color: #333;}
+#contentHot {}
+#contentHot h1 {border-bottom: solid 2px #e74c3c; padding: 0;}
+#contentAbout {;}
+#contentAbout h1 {border-bottom: solid 2px #e74c3c; padding: 0;}
+#contentDelivery {}
+#contentDelivery h1 {border-bottom: solid 2px #e74c3c; padding: 0;}
+#contentArticles {;}
+#contentArticles h1 {border-bottom: solid 2px #e74c3c; padding: 0;}
+
+#sectionMain {width: 590px; float: left; padding: 0; color: #333; margin: 0;}
+#sectionMain h2 {font-size: 16px; font-weight: bold;}
+#sectionMain h3 {font-size: 14px; font-weight: bold;}
+
+#sectionMain2 {width: 840px; float: left; padding: 0; color: #333; margin: 0;}
+
+#contentPartners {width: 140px;
+float: left;
+padding-right: 20px;
+padding: 5px 7px 5px 7px;
+border-radius: 5px;
+margin: 10px 20px 5px 0;
+border: solid 1px #ddd;}
+#contentPartners a {display: block; width: 140px; margin-bottom: 12px; text-indent: -9999px; border-bottom: 1px dotted #ddd; padding-bottom: 6px;}
+span.sideHeader {text-align: center;
+color: white;
+display: block;
+font-size: 12px;
+padding: 3px;
+background-color: #e74c3c;
+margin-bottom: 20px;}
+
+#amenuAbout {border-bottom-color: #1abc9c;}
+#amenuOrder {border-bottom-color: #2ecc71;}
+#amenuShop {border-bottom-color: #3498db;}
+#amenuHot {border-bottom-color: #9b59b6;}
+#amenuDelivery {border-bottom-color: #34495e;}
+#amenuManual {border-bottom-color: #7f8c8d;}
+#amenuIcars {border-bottom-color: #e74c3c;}
+#amenuPolcar {border-bottom-color: #d35400;}
+#amenuAutopartner {border-bottom-color: #2980b9;}
+
+#socialBlock {width: 49px; height: 385px; float: right; position: relative; background: transparent; border-left: 1px solid #ddd;}
+.social {position: absolute; width: 40px; height: 40px; background-color: #fefefe; color: white; opacity: 0.8; font-weight: bold; text-indent: -9999px; border: 1px #ddd; border-bottom-style: solid; border-top-style: solid; border-right-style: solid; border-top-right-radius: 3px; border-bottom-right-radius: 3px;}
+.social:hover {opacity: 1.0;  cursor: pointer;}
+#socialFB {top: 140px; background: url("images/facebook.png") no-repeat #fefefe 2px 3px;}
+#socialVK {top: 194px; background: url("images/vk.png") no-repeat #fefefe 2px 3px;}
+#socialO {top: 248px; background: url("images/ok.png") no-repeat #fefefe 2px 3px;}
+#socialt {top: 302px; background: url("images/tw.png") no-repeat #fefefe 2px 3px;}
+
+.itemNewsShort {padding: 10px 5px 5px 10px; border: solid 1px #ddd; margin-bottom: 10px; border-radius: 6px;}
+.itemNewsShort a {font-size: 10px;}
+
+.itemNewsShort2 {padding: 0 5px 10px 0; margin: 10px 0 25px 0;}
+.itemNewsShort2 a {font-size: 10px; margin-top: 6px;}
+.itemNewsShort2 a, .itemNewsShort2 span {display: block;}
+.itemNewsShort2 span {font-weight: bold; margin-bottom: 6px;}
+
+.gradient {
+    background: #fff; /* Для старых браузров */
+    background: -moz-linear-gradient(top, #fff, #f5f5f5); /* Firefox 3.6+ */
+    /* Chrome 1-9, Safari 4-5 */
+    background: -webkit-gradient(linear, left top, left bottom, 
+                color-stop(0%,#fff), color-stop(100%,#f5f5f5));
+    /* Chrome 10+, Safari 5.1+ */
+    background: -webkit-linear-gradient(top, #fff, #f5f5f5);
+    background: -o-linear-gradient(top, #fff, #f5f5f5); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #fff, #f5f5f5); /* IE10 */
+    background: linear-gradient(top, #fff, #f5f5f5); /* CSS3 */ 
+}
+
+.gradientH {
+    background: #fff; /* Для старых браузров */
+    background: -moz-linear-gradient(right, #fff, #f5f5f5); /* Firefox 3.6+ */
+    /* Chrome 1-9, Safari 4-5 */
+    background: -webkit-gradient(linear, left top, right top, 
+                color-stop(0%,#fff), color-stop(100%,#f5f5f5));
+    /* Chrome 10+, Safari 5.1+ */
+    background: -webkit-linear-gradient(right, #fff, #f5f5f5);
+    background: -o-linear-gradient(right, #fff, #f5f5f5); /* Opera 11.10+ */
+    background: -ms-linear-gradient(right, #fff, #f5f5f5); /* IE10 */
+    background: linear-gradient(right, #fff, #f5f5f5); /* CSS3 */ 
+}
+
+#advPrivat24 {background: url("images/privat24.png") no-repeat #e5e5e5 5px 8px; height: 50px; width: 200px; margin: 0 0 5px 0;}
+#advHusky {background: url("images/husky.png") no-repeat #ffffff 10px 8px; height: 50px; width: 200px; margin: 0 0 5px 0;}
+#advZoreslav {background: url("images/zoreslav.png") no-repeat #ffffff; height: 50px; width: 190px; margin: 0 0 5px 0;}
+#advMeat {background-color: #e74c3c; height: 90px; width: 160px; margin: 0 0 5px 0;}
+
+#advAutopartner {background: url("images/autopartner.jpg") no-repeat; height: 70px;}
+#advIntercars {background: url("images/intercars.png") no-repeat; height: 37px;}
+#advPolcar {background: url("images/polcar.jpg") no-repeat; height: 31px;}
+#advIntervito {background: url("images/intervito.jpg") no-repeat; height: 31px;}
+#advVemapol {background: url("images/vemapol.png") no-repeat; height: 61px;}
+#advMotogama {background: url("images/motogama.jpg") no-repeat; height: 30px;}
+#advAutoGietka {background: url("images/autogietka.gif") no-repeat; height: 27px;}
+#advEMoto {background: url("images/emoto.png") no-repeat; height: 27px;}
+
+#sectionMain h1 {font-size: 20px; padding-top: 8px;}
+
+#phone {width: 120px; margin-top: 10px; padding: 7px 15px; color: #333; position: absolute; font-size: 12px; font-weight: bold; right: -42px; border: 1px solid #ddd; border-radius: 5px; background-color: white;}
+
+#footerMain {width: 1024px; height: 60px; float: left; border-top: solid 2px #ddd; background: url("images/bumper.png") no-repeat 710px -68px}
+.copyText {display: block; float: right; font-size: 10px; padding: 5px; color: #333;}
+table.data tr td {background-color: #f9f9f9; padding: 5px;}
+table.data tr.odd td {background-color: #f5f5f5;}
+
+.pageMenu {font-size: 10px; padding-top: 7px;}
