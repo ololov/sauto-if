@@ -4,7 +4,7 @@
             <div class="fb-like" data-href="<?=curPageURL()?>" data-send="true" data-width="600" data-show-faces="true"></div>
             <header><h1>Гарячі пропозиції</h1></header>
                 <? include('contentpromo.tmpl'); ?>
-                <h2>А також:</h2>
+                <header><h1>А також</h1></header>
                 <? if ($_GET['view'] == 'grid') {
                     include('contenthot_viewgrid.tmpl');
                 } else {

@@ -76,13 +76,13 @@ margin-bottom: 20px;}
 #amenuPolcar {border-bottom-color: #d35400;}
 #amenuAutopartner {border-bottom-color: #2980b9;}
 
-#socialBlock {width: 49px; height: 320px; float: right; position: relative; background: transparent; border-left: 1px solid #ddd;}
+#socialBlock {width: 49px; height: 385px; float: right; position: relative; background: transparent; border-left: 1px solid #ddd;}
 .social {position: absolute; width: 40px; height: 40px; background-color: #fefefe; color: white; opacity: 0.8; font-weight: bold; text-indent: -9999px; border: 1px #ddd; border-bottom-style: solid; border-top-style: solid; border-right-style: solid; border-top-right-radius: 3px; border-bottom-right-radius: 3px;}
 .social:hover {opacity: 1.0;  cursor: pointer;}
-#socialFB {top: 100px; background: url("images/facebook.png") no-repeat #fefefe 2px 3px;}
-#socialVK {top: 154px; background: url("images/vk.png") no-repeat #fefefe 2px 3px;}
-#socialO {top: 208px; background: url("images/ok.png") no-repeat #fefefe 2px 3px;}
-#socialt {top: 262px; background: url("images/tw.png") no-repeat #fefefe 2px 3px;}
+#socialFB {top: 140px; background: url("images/facebook.png") no-repeat #fefefe 2px 3px;}
+#socialVK {top: 194px; background: url("images/vk.png") no-repeat #fefefe 2px 3px;}
+#socialO {top: 248px; background: url("images/ok.png") no-repeat #fefefe 2px 3px;}
+#socialt {top: 302px; background: url("images/tw.png") no-repeat #fefefe 2px 3px;}
 
 .itemNewsShort {padding: 10px 5px 5px 10px; border: solid 1px #ddd; margin-bottom: 10px; border-radius: 6px;}
 .itemNewsShort a {font-size: 10px;}

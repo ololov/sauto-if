@@ -23,7 +23,7 @@
     $order_index = $mainmenuindex / 10 - 1;
 
     $content_tmpl = 'short_content';
-    $maincontent_tmpl = 'contentorder';
+    $maincontent_tmpl = 'contentuc';
 
     include('index.tmpl');
 
