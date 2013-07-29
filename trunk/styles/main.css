@@ -4,7 +4,7 @@ bbackground: url("images/bg.png") repeat ;
   width: 100%;
 }
 #mainWrapper {width: 1074px;  margin: 0 auto; background-color: transparent; overflow: hidden;}
-#logoMain {background: url("images/logo.png") no-repeat white 30px 0; height: 191px; width: 1024px; float: left; position: relative;}
+#logoMain {background: url("images/logo.png") no-repeat white 30px 0; height: 191px; width: 1024px; float: left; position: relative; cursor: pointer;}
 #logoMain p.l1 {margin: 0; padding: 20px 0 12px 500px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
 #logoMain p.l2 {margin: 0; padding: 0 0 12px 600px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
 #logoMain p.l3 {margin: 0; padding: 0 0 0 700px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
