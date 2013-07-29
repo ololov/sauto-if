@@ -142,3 +142,6 @@ table.data tr td {background-color: #f9f9f9; padding: 5px;}
 table.data tr.odd td {background-color: #f5f5f5;}
 
 .pageMenu {font-size: 10px; padding-top: 7px;}
+
+.smallText {font-size: 10px; text-align: right;}
+.promo {width: 260px; padding: 10px 10px 10px 0; float: left;}
