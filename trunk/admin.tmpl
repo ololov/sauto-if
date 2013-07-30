@@ -1,4 +1,10 @@
-<? session_start(); ?>
+<? session_start();
+if (!isset($_SESSION['user_id']))
+{
+    header('Content-Type: text/html; charset=utf-8');
+    die('<a href="login.php">Необхідно увійти в систему</a>');
+}
+?>
 
 <!DOCTYPE html>
 <html>
