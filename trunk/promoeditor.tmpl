@@ -1,0 +1,68 @@
+<!-- Promo TextEditor content template -->
+
+        <? 
+        $promofile = 'promo/promo.htm';
+        if ($_POST['arch'] == 'yes') {
+                $date = new DateTime(); 
+                $addtext = $date->format('Ymd_His');
+                copy('promo/promo.htm', 'promo/archive/'.$addtext.'_promo.htm');
+        }
+        if ($_POST['save'] == 'yes') {
+                $content = $_POST['promoText'];
+                file_put_contents($promofile, $content); 
+        }
+        $promocontent = file_get_contents($promofile);
+        ?>
+
+        <script type="text/javascript" src="nicEdit.js"></script>
+        <script type="text/javascript">
+            var promoEdit, promo2Edit;
+
+            function enablePromoEditor() {
+                promoEdit = 
+                new nicEditor({
+                    fullPanel : true,
+                    iconsPath:'nicEditorIcons.gif',
+                    uploadURI : 'nicUpload.php', 
+                }).panelInstance('promoTextArea');
+            }
+
+            function disablePromoEditor() {
+                promoEdit.removeInstance('promoTextArea');
+            }
+
+            bkLib.onDomLoaded(function() { enablePromoEditor(); enablePromo2Editor(); });
+        </script>
+
+    <div class="content" id="contentPromoEditor">
+        <header><h1>Редагування основної пропозиції</h1></header>
+        <form action="promoeditor.php" method="post">
+            <input type="hidden" name="arch" value="yes">
+            <p><input type="submit" value="Зробити копію до архіву"></p>
+            <p>Рекомендується робити копії попередніх промоцій</p>
+            <p><? if ($_POST['arch'] == 'yes') { echo 'копію зроблено успішно'; } ?></p>
+        </form>
+        <form action="promoeditor.php" method="post">
+            <input type="hidden" name="save" value="yes">
+            <p><input type="submit" value="Зберегти"></p>
+            <p><? if ($_POST['save'] == 'yes') { echo 'зміни збережено'; } ?></p>
+            <div id="subMenu">
+                <a class="menu" href="#" onclick="promoEdit = enablePromoEditor();">Увімкнути редактор</a><a class="menu" href="#" onclick="disablePromoEditor();">Вимкнути редактор (режим HTML)</a>
+            </div>
+            <textarea name="promoText" id="promoTextArea"><?=$promocontent?></textarea>
+        </form>
+    </div>
+
+<!-- Promo TextEditor content template -->
+
+        <? 
+//        $date = new DateTime(); //this returns the current date time
+//        $result = $date->format('Ymd_His');
+//        echo "date: ".$result; 
+//        copy('promo/promo.htm', 'promo/archive/'.$result.'_promo.htm');
+//        copy('promo/promo2.htm', 'promo/archive/'.$result.'_promo2.htm'); 
+//$content .= "<p>123</p>";
+// Write the contents back to the file
+//file_put_contents($file, $content); 
+        ?>
+

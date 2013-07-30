@@ -34,13 +34,13 @@ $content = file_get_contents($file);
         <textarea style="width: 700px; height: 400px;" id="articleEdit">
         <?=$content?>
         </textarea>
-        <a href="#" onclick="enableEditor();">Увімкнути редактор</a> | <a href="#" onclick="disableEditor();">Вимкнути редактор (режим HTML)</a>
+        <a class="menu" href="#" onclick="enableEditor();">Увімкнути редактор</a> | <a class="menu" href="#" onclick="disableEditor();">Вимкнути редактор (режим HTML)</a>
         <? $date = new DateTime(); //this returns the current date time
         $result = $date->format('Ymd_His');
-        echo "date: ".$result; 
-        copy('promo/promo.htm', 'promo/archive/'.$result.'_promo.htm');
-        copy('promo/promo2.htm', 'promo/archive/'.$result.'_promo2.htm'); 
-$content .= "<p>123</p>";
+//        echo "date: ".$result; 
+//        copy('promo/promo.htm', 'promo/archive/'.$result.'_promo.htm');
+//        copy('promo/promo2.htm', 'promo/archive/'.$result.'_promo2.htm'); 
+//$content .= "<p>123</p>";
 // Write the contents back to the file
 file_put_contents($file, $content); ?>
     </div>

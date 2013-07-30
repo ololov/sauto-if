@@ -145,3 +145,7 @@ table.data tr.odd td {background-color: #f5f5f5;}
 
 .smallText {font-size: 10px; text-align: right;}
 .promo {width: 260px; padding: 10px 10px 10px 0; float: left;}
+
+h1#adminPanel {width: 1000px; padding: 3px; color: white; background-color: red; float: left; text-align: center;}
+#promoTextArea {width: 1000px; height: 500px;}
+#sectionAdmin {width: 1010px;}
