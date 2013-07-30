@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title><?=$title?></title>
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    </head>
+    <body>
+        <div id="mainWrapper">
+            <? include('header.tmpl'); ?>
+            <? include('adminmenu.tmpl'); ?>
+            <header><h1>Панель адміністратора</h1></header>
+            <? include($content_tmpl.'.tmpl'); ?>
+            <? include('footer.tmpl'); ?>
+        </div>
+    </body>
+</html>

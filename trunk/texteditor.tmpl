@@ -1,0 +1,48 @@
+<!-- Admin TextEditor content template -->
+
+    <div class="content" id="contentAdminTextEditor">
+        <header><h1>Текстовий редактор</h1></header>
+        <script type="text/javascript" src="nicEdit.js"></script>
+        <script type="text/javascript">
+
+            var articleEdit;
+
+            function enableEditor() {
+                articleEdit = 
+                new nicEditor({
+                    fullPanel : true,
+                    iconsPath:'nicEditorIcons.gif',
+                    uploadURI : 'nicUpload.php', 
+                }).panelInstance('articleEdit');
+            }
+
+            function disableEditor() {
+                articleEdit.removeInstance('articleEdit');
+            }
+
+
+        bkLib.onDomLoaded(function() { enableEditor(); });
+
+        </script>
+
+<?
+$file = 'promo/promo.htm';
+// Open the file to get existing content
+$content = file_get_contents($file);
+// Append a new person to the file
+        ?>
+        <textarea style="width: 700px; height: 400px;" id="articleEdit">
+        <?=$content?>
+        </textarea>
+        <a href="#" onclick="enableEditor();">Увімкнути редактор</a> | <a href="#" onclick="disableEditor();">Вимкнути редактор (режим HTML)</a>
+        <? $date = new DateTime(); //this returns the current date time
+        $result = $date->format('Ymd_His');
+        echo "date: ".$result; 
+        copy('promo/promo.htm', 'promo/archive/'.$result.'_promo.htm');
+        copy('promo/promo2.htm', 'promo/archive/'.$result.'_promo2.htm'); 
+$content .= "<p>123</p>";
+// Write the contents back to the file
+file_put_contents($file, $content); ?>
+    </div>
+
+<!-- Admin TextEditor content template -->
