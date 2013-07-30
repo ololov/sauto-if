@@ -1,11 +1,11 @@
 <!-- Promo TextEditor content template -->
 
         <? 
-        $promofile = 'promo/promo.htm';
+        $promofile = 'promo/'.$prom.'.htm';
         if ($_POST['arch'] == 'yes') {
                 $date = new DateTime(); 
                 $addtext = $date->format('Ymd_His');
-                copy('promo/promo.htm', 'promo/archive/'.$addtext.'_promo.htm');
+                copy('promo/'.$prom.'.htm', 'promo/archive/'.$addtext.'_'.$prom.'.htm');
         }
         if ($_POST['save'] == 'yes') {
                 $content = $_POST['promoText'];
@@ -16,7 +16,7 @@
 
         <script type="text/javascript" src="nicEdit.js"></script>
         <script type="text/javascript">
-            var promoEdit, promo2Edit;
+            var promoEdit;
 
             function enablePromoEditor() {
                 promoEdit = 
@@ -27,42 +27,22 @@
                 }).panelInstance('promoTextArea');
             }
 
-            function disablePromoEditor() {
-                promoEdit.removeInstance('promoTextArea');
-            }
-
-            bkLib.onDomLoaded(function() { enablePromoEditor(); enablePromo2Editor(); });
+            bkLib.onDomLoaded(function() { enablePromoEditor(); });
         </script>
 
     <div class="content" id="contentPromoEditor">
-        <header><h1>Редагування основної пропозиції</h1></header>
-        <form action="promoeditor.php" method="post">
-            <input type="hidden" name="arch" value="yes">
-            <p><input type="submit" value="Зробити копію до архіву"></p>
-            <p>Рекомендується робити копії попередніх промоцій</p>
-            <p><? if ($_POST['arch'] == 'yes') { echo 'копію зроблено успішно'; } ?></p>
-        </form>
-        <form action="promoeditor.php" method="post">
+        <form action="<?=$prom?>editor.php" method="post">
+            <div class="buttonsMenu">
+            <input type="checkbox" name="arch" value="yes">&nbsp;Зробити копію перед збереженням?</td>
             <input type="hidden" name="save" value="yes">
-            <p><input type="submit" value="Зберегти"></p>
-            <p><? if ($_POST['save'] == 'yes') { echo 'зміни збережено'; } ?></p>
-            <div id="subMenu">
-                <a class="menu" href="#" onclick="promoEdit = enablePromoEditor();">Увімкнути редактор</a><a class="menu" href="#" onclick="disablePromoEditor();">Вимкнути редактор (режим HTML)</a>
+            <input type="submit" value="Зберегти зміни">
+            </div>
+            <div class="info">
+            <? if ($_POST['arch'] == 'yes') { echo '<span class="info">копію зроблено успішно</span>'; } ?>
+            <? if ($_POST['save'] == 'yes') { echo '<span class="info">зміни збережено</span>'; } ?>
             </div>
             <textarea name="promoText" id="promoTextArea"><?=$promocontent?></textarea>
         </form>
     </div>
 
 <!-- Promo TextEditor content template -->
-
-        <? 
-//        $date = new DateTime(); //this returns the current date time
-//        $result = $date->format('Ymd_His');
-//        echo "date: ".$result; 
-//        copy('promo/promo.htm', 'promo/archive/'.$result.'_promo.htm');
-//        copy('promo/promo2.htm', 'promo/archive/'.$result.'_promo2.htm'); 
-//$content .= "<p>123</p>";
-// Write the contents back to the file
-//file_put_contents($file, $content); 
-        ?>
-

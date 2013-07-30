@@ -1487,12 +1487,12 @@ var nicCodeOptions = {
 /* END CONFIG */
 
 var nicCodeButton = nicEditorAdvancedButton.extend({
-	width : '350px',
+	width : '710px',
 		
 	addPane : function() {
 		this.addForm({
 			'' : {type : 'title', txt : 'Edit HTML'},
-			'code' : {type : 'content', 'value' : this.ne.selectedInstance.getContent(), style : {width: '340px', height : '200px'}}
+			'code' : {type : 'content', 'value' : this.ne.selectedInstance.getContent(), style : {width: '700px', height : '350px'}}
 		});
 	},
 	
