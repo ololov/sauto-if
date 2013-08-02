@@ -32,7 +32,7 @@ bbackground: url("images/bg.png") repeat ;
 a, a:focus, a:active, a:hover {text-decoration: underline; color: #2b1b17;}
 a:hover {text-decoration: none; color: #b1b1b1;}
 
-.content {padding: 15px 25px 15px 0; background-color: white; color: #333; margin: 10px 0; bborder-radius: 6px; bborder: 1px solid #ddd;}
+.content {padding: 0 25px 15px 0; background-color: white; color: #333; margin: 10px 0; bborder-radius: 6px; bborder: 1px solid #ddd;}
 .content h1 {margin: 0 0 6px 0;}
 #contentNews {bbackground-color: #e5e5e5; float: left; width: 250px; color: #333;}
 #contentHot {}
@@ -81,7 +81,7 @@ margin-bottom: 20px;}
 .social:hover {opacity: 1.0;  cursor: pointer;}
 #socialFB {top: 140px; background: url("images/facebook.png") no-repeat #fefefe 2px 3px;}
 #socialVK {top: 194px; background: url("images/vk.png") no-repeat #fefefe 2px 3px;}
-#socialO {top: 248px; background: url("images/ok.png") no-repeat #fefefe 2px 3px;}
+#socialPrivat24 {top: 248px; background: url("images/privat24.png") no-repeat #fefefe 3px 4px;}
 #socialt {top: 302px; background: url("images/tw.png") no-repeat #fefefe 2px 3px;}
 
 .itemNewsShort {padding: 10px 5px 5px 10px; border: solid 1px #ddd; margin-bottom: 10px; border-radius: 6px;}
