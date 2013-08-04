@@ -4,6 +4,9 @@
                         <div class="orderForm">
                             <form action="orderonlinesave.php" method="POST">
                                 <input type="hidden" name="action" value="save">
+                                <input type="hidden" name="order_title" value="<?=$order_title?>">
+                                <p>телефон</p>
+                                <input type="text" name="phone"><br/>
                                 <p>коментар</p>
                                 <textarea name="descr"></textarea></br>
                                 <input type="submit" value="Зробити замовлення">
