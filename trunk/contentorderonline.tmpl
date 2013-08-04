@@ -1,24 +1,12 @@
-<!-- About content template -->
+<!-- Order content template -->
 
                 <div class="content" id="contentOrder">
                     <header><h1><?=$_order_titles[$order_index]?></h1></header>
-                        <? if ($result == 'error') { ?>
-                            <p class="error">При оформленні замовлення трапились помилка. Спробуйте ще раз. Якщо ситуація повториться, то повідомте про це нас по телефону, або напишіть листа на sauto@mail.ua</p>
-                        <? } 
-                        if ($result == 'ok') { ?>
-                            <h3>Дякуємо за замовлення!</h3>
-                            <p>Унікальний номер вашого замовлення <span><?=$title.$order_id?>. Запам&amp;ятайте або запишіть його.</p>
-                            <p>Ми скоро звами зв&amp;яжемося для уточнення всіх деталей замовлення.</p>
-                        <? } ?>
-                        <p>Тут треба написати якийсь прикольний текст, типу що замовлення онлайн є найшвидшим і найкращим. Але якщо у вас не получається, то ви також, звісно можете зробити замовлення надіславши листа на sauto@mail.ua або зателефонувавши за телефонами +38000....</p>
-                        <div class="orderForm">
-                            <form action="orderonlinesave.php" method="POST">
-                                <input type="hidden" name="action" value="save">
-                                <p>коментар</p>
-                                <textarea name="descr"></textarea>
-                                <input type="submit" value="Зробити замовлення">
-                            </form>
-                        </div>
+                        <? if ($result != '') { 
+                            include('blockorderresult.tmpl'); 
+                        } else { 
+                            include($formorder); 
+                        } ?>
                 </div>
 
-<!-- About content template -->
+<!-- Order content template -->

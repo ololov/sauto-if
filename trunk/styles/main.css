@@ -197,3 +197,31 @@ padding: 5px;
 }
 
 .leftAlign {padding: 10px 10px 10px 0; float: left;}
+
+.info {
+display: block;
+width: 300px;
+float: right;
+font-size: 12px;
+padding: 5px;
+background-color: #fcf8e3;
+border-radius: 5px;
+border: 1px solid orange;
+}
+
+.error {
+border-radius: 5px;
+border: 1px red solid;
+padding: 5px;
+width: 400px;
+margin-top: 20px;
+color: red;
+}
+
+.ok {
+width: 600px;
+border-radius: 5px;
+border: 1px solid orange;
+padding: 5px;
+margin-top: 20px;
+}
