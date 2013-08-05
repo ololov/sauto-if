@@ -213,7 +213,7 @@ border: 1px solid orange;
 border-radius: 5px;
 border: 1px red solid;
 padding: 5px;
-width: 400px;
+width: 438px;
 margin-top: 20px;
 color: red;
 }
@@ -224,4 +224,57 @@ border-radius: 5px;
 border: 1px solid orange;
 padding: 5px;
 margin-top: 20px;
+}
+
+.orderTitle {
+    width: 140px;
+    float: left;
+    text-align: right;
+    padding: 7px 5px 0 0;
+}
+
+.required {color: red;}
+
+.editText {
+    width: 300px;
+    border: 1px #ddd solid;
+    padding: 2px;
+}
+
+.orderHelper {
+    margin-left: 145px;
+    font-size: 12px;
+    color: #999;
+    width: 300px;
+    padding-top: 3px;
+}
+
+.editDescr {
+    width: 300px;
+    border: 1px #ddd solid;
+    padding: 2px;
+    height: 120px;
+}
+
+.orderBlock {
+    padding: 10px 0;
+}
+
+.orderSubmit {
+    margin-left: 145px;
+}
+
+.orderSubmit {
+    background-color: #e74c3c;
+    border: none;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0.8
+}
+
+.orderSubmit:hover {
+    opacity: 1.0;
 }

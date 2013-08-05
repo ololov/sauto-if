@@ -1,15 +1,57 @@
 <!-- Order content template -->
 
                         <p class="info">Замовлення онлайн є найшвидшим та найпростішим способом. Але звісно Ви також можете зробити замовлення надіславши листа на електронну адресу або за телефоном</p>
-                        <div class="orderForm">
+                        <div id="orderFormOnline" class="orderForm">
                             <form action="orderonlinesave.php" method="POST">
+
                                 <input type="hidden" name="action" value="save">
                                 <input type="hidden" name="order_title" value="<?=$order_title?>">
-                                <p>телефон</p>
-                                <input type="text" name="phone"><br/>
-                                <p>коментар</p>
-                                <textarea name="descr"></textarea></br>
-                                <input type="submit" value="Зробити замовлення">
+
+                                <div class="error">тут будуть помилки валідації форми</div>
+
+
+                                <div class="orderBlock" id="orderEmailBlock">
+                                    <label for="editEmail">
+                                        <span class="orderTitle">Email:
+                                            <span class="required">*</span>
+                                        </span>
+                                    </label>
+                                    <input type="text" class="editText" maxlength="50" name="email">
+                                    <div class="orderHelper">Будь-ласка вказуйте вірний email. Так наші менеджери зможуть швидко з вами зв&apos;язатись. Ми не передаємо ваш email третім особам і не використовуємо його для розсилки.</div>
+                                </div>
+
+                                <div class="orderBlock" id="orderPhoneBlock">
+                                    <label for="editPhone">
+                                        <span class="orderTitle">Номер телефону:
+                                            <span class="required">*</span>
+                                        </span>
+                                    </label>
+                                    <input type="text" class="editText" maxlength="50" name="phone">
+                                    <div class="orderHelper">Будь-ласка вказуйте вірний номер телефону. Так наші менеджери зможуть швидко з вами зв&apos;язатись. Ми не передаємо ваш номер телефону третім особам і не використовуємо його для розсилки.</div>
+                                </div>
+
+                                <div class="orderBlock" id="orderFile">
+                                    <label for="editFile">
+                                        <span class="orderTitle">Файл-замовлення:
+                                            <span class="required">*</span>
+                                        </span>
+                                    </label>
+                                    <input type="file" name="file" size="18">
+                                    <div class="orderHelper">Файл-замовлення з терміналу наших партнерів</div>
+                                </div>
+
+                                <div class="orderBlock" id="orderDescrBlock">
+                                    <label for="editDescr">
+                                        <span class="orderTitle">Коментар:</span>
+                                    </label>
+                                    <textarea class="editDescr" name="descr" cols="50"></textarea></br>
+                                    <div class="orderHelper">Будь-ласка вказуйте в коментарі додаткові параметри замовлення - колір, бажану службу доставки, методи оплати, тощо.</div>
+                                </div>
+
+                                <div class="orderBlock" id="orderSubmitBlock">
+                                    <input class="orderSubmit" type="submit" value="Зробити замовлення">
+                                </div>
+
                             </form>
                         </div>
 
