@@ -3,9 +3,9 @@
     mysql_connect("localhost", "sauto_web", "9731") or die (mysql_error());
     mysql_select_db("sauto_sauto") or die (mysql_error());
 
-    mysql_query("set character_set_client	='cp1251'");
-    mysql_query("set character_set_results	='cp1251'");
-    mysql_query("set collation_connection	='cp1251_general_ci'");
+    mysql_query("set character_set_client	='utf8'");
+    mysql_query("set character_set_results	='utf8'");
+    mysql_query("set collation_connection	='utf8_general_ci'");
 	
 	
 	// сюда вынесем обработку суперглобальных массивов от слешей

@@ -7,8 +7,21 @@
                                 <input type="hidden" name="action" value="save">
                                 <input type="hidden" name="order_title" value="<?=$order_title?>">
 
-                                <div class="error">тут будуть помилки валідації форми</div>
+                                <div class="error" style="display: none;">тут будуть помилки валідації форми</div>
 
+
+                                <div class="orderBlock">
+                                    <h3>Контактна інформація</h3>
+                                </div>
+
+                                <div class="orderBlock" id="orderNicknameBlock">
+                                    <label for="editNickname">
+                                        <span class="orderTitle">Ваше ім&apos;я:
+                                            <span class="required">*</span>
+                                        </span>
+                                    </label>
+                                    <input type="text" class="editText" maxlength="50" name="nickname">
+                                </div>
 
                                 <div class="orderBlock" id="orderEmailBlock">
                                     <label for="editEmail">
@@ -30,22 +43,84 @@
                                     <div class="orderHelper">Будь-ласка вказуйте вірний номер телефону. Так наші менеджери зможуть швидко з вами зв&apos;язатись. Ми не передаємо ваш номер телефону третім особам і не використовуємо його для розсилки.</div>
                                 </div>
 
+                                <div class="orderBlock">
+                                    <h3>Деталі замовлення</h3>
+                                </div>
+
+                                <div class="orderBlock" id="orderDetailBlock">
+                                    <label for="editEmail">
+                                        <span class="orderTitle">Назва запчастини:
+                                            <span class="required">*</span>
+                                        </span>
+                                    </label>
+                                    <input type="text" class="editText" maxlength="50" name="detail">
+                                    <div class="orderHelper">Якщо вам необхідно замовити декілька деталей, чи різні деталі, то будь-лака вказуйте це у примітках.</div>
+                                </div>
+
+                                <div class="orderBlock" id="orderAutoBlock">
+                                    <label for="editEmail">
+                                        <span class="orderTitle">Марка та модель авто:
+                                            <span class="required">*</span>
+                                        </span>
+                                    </label>
+                                    <input type="text" class="editText" maxlength="50" name="auto">
+                                </div>
+
+                                <div class="orderBlock" id="orderAutoYearBlock">
+                                    <label for="editEmail">
+                                        <span class="orderTitle">Рік випуску:
+                                            <span class="required">*</span>
+                                        </span>
+                                    </label>
+                                    <input type="text" class="editText" maxlength="50" name="autoyear">
+                                </div>
+
+                                <div class="orderBlock" id="orderAutoBodyNoBlock">
+                                    <label for="editEmail">
+                                        <span class="orderTitle">Номер кузова:
+                                            <span class="required">*</span>
+                                        </span>
+                                    </label>
+                                    <input type="text" class="editText" maxlength="50" name="autobodyno">
+                                </div>
+
+                                <div class="orderBlock" id="orderVinBlock">
+                                    <label for="editEmail">
+                                        <span class="orderTitle">VIN-код запчастини:
+                                            <span class="required">*</span>
+                                        </span>
+                                    </label>
+                                    <input type="text" class="editText" maxlength="50" name="vin">
+                                </div>
+
                                 <div class="orderBlock" id="orderFile">
                                     <label for="editFile">
                                         <span class="orderTitle">Файл-замовлення:
                                             <span class="required">*</span>
                                         </span>
                                     </label>
-                                    <input type="file" name="file" size="18">
+                                    <input type="file" name="filename" size="18">
                                     <div class="orderHelper">Файл-замовлення з терміналу наших партнерів</div>
                                 </div>
 
                                 <div class="orderBlock" id="orderDescrBlock">
                                     <label for="editDescr">
-                                        <span class="orderTitle">Коментар:</span>
+                                        <span class="orderTitle">Примітки щодо замовлення:</span>
                                     </label>
                                     <textarea class="editDescr" name="descr" cols="50"></textarea></br>
                                     <div class="orderHelper">Будь-ласка вказуйте в коментарі додаткові параметри замовлення - колір, бажану службу доставки, методи оплати, тощо.</div>
+                                </div>
+
+                                <div class="orderBlock">
+                                    <h3>Додаткова інформація</h3>
+                                </div>
+
+                                <div class="orderBlock" id="orderReviewBlock">
+                                    <label for="editDescr">
+                                        <span class="orderTitle">Ваші відгуки щодо роботи нашого сайту:</span>
+                                    </label>
+                                    <textarea class="editDescr" name="review" cols="50"></textarea></br>
+                                    <div class="orderHelper">Ваш об&apos;єктивний відгук допоможе покращити наш сайт. Дана інформація ніяк не буде використана при обробці замовлення.</div>
                                 </div>
 
                                 <div class="orderBlock" id="orderSubmitBlock">

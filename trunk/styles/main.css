@@ -227,7 +227,7 @@ margin-top: 20px;
 }
 
 .orderTitle {
-    width: 140px;
+    width: 160px;
     float: left;
     text-align: right;
     padding: 7px 5px 0 0;
@@ -236,21 +236,22 @@ margin-top: 20px;
 .required {color: red;}
 
 .editText {
-    width: 300px;
+    width: 280px;
     border: 1px #ddd solid;
     padding: 2px;
+    color: #333;
 }
 
 .orderHelper {
-    margin-left: 145px;
-    font-size: 12px;
+    margin-left: 165px;
+    font-size: 11px;
     color: #999;
-    width: 300px;
+    width: 280px;
     padding-top: 3px;
 }
 
 .editDescr {
-    width: 300px;
+    width: 280px;
     border: 1px #ddd solid;
     padding: 2px;
     height: 120px;
@@ -261,7 +262,7 @@ margin-top: 20px;
 }
 
 .orderSubmit {
-    margin-left: 145px;
+    margin-left: 165px;
 }
 
 .orderSubmit {
@@ -277,4 +278,9 @@ margin-top: 20px;
 
 .orderSubmit:hover {
     opacity: 1.0;
+}
+
+.orderForm h3 {
+    width: 450px;
+    border-bottom: 1px solid #e74c3c;
 }
