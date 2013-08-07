@@ -35,6 +35,28 @@
         $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
         $returnurl = $_POST['returnurl'];
         $extra = $returnurl.'.php?result='.$result.'&order_id='.$order_id;
+
+$to = "gzoreslav@gmail.com"; 
+$order = $order_title.'-'.$order_id;
+$subject = "SAUTO - iCars order #".$order; 
+$cur_date = date('r');
+$message = $review; 
+
+$boundary = "--".md5(uniqid(time())); 
+
+$mailheaders = "MIME-Version: 1.0;\r\n"; 
+$mailheaders .="Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n"; 
+
+$mailheaders .= "From: SAUTO <order@sauto.if.ua>\r\n"; 
+
+$multipart = "--$boundary\r\n"; 
+$multipart .= "Content-Type: text/html; charset=windows-1251\r\n";
+$multipart .= "Content-Transfer-Encoding: base64\r\n";    
+$multipart .= "\r\n";
+$multipart .= chunk_split(base64_encode(iconv("utf8", "windows-1251", $message)));
+
+mail($to,$subject,$multipart,$mailheaders);
+
         header("Location: http://$host$uri/$extra");
         exit;
 
