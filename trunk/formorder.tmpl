@@ -1,0 +1,24 @@
+<!-- Order content template -->
+
+                        <p class="info">Замовлення онлайн є найшвидшим та найпростішим способом. Але звісно Ви також можете зробити замовлення надіславши листа на електронну адресу або за телефоном</p>
+                        <div id="orderFormOnline" class="orderForm">
+                            <form action="ordersave.php" method="POST">
+
+                                <input type="hidden" name="action" value="save">
+                                <input type="hidden" name="order_title" value="<?=$order_title?>">
+                                <input type="hidden" name="returnurl" value="<?=$returnurl?>">
+
+                                <div class="error" style="display: none;">тут будуть помилки валідації форми</div>
+
+                                <? include('formorderuserinfo.tmpl'); ?>
+                                <? include($formorderdetails); ?>
+                                <? include('formorderreview.tmpl'); ?>
+
+                                <div class="orderBlock" id="orderSubmitBlock">
+                                    <input class="orderSubmit" type="submit" value="Зробити замовлення">
+                                </div>
+
+                            </form>
+                        </div>
+
+<!-- Order content template -->

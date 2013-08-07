@@ -1,56 +1,12 @@
-<!-- About content template -->
+<!-- Order content template -->
 
                 <div class="content" id="contentOrder">
                     <header><h1><?=$_order_titles[$order_index]?></h1></header>
-                        <p>Тут треба написати якийсь прикольний текст, типу що замовлення онлайн є найшвидшим і найкращим. Але якщо у вас не получається, то ви також, звісно можете зробити замовлення надіславши листа на sauto@mail.ua або зателефонувавши за телефонами +38000....</p>
-                        <div class="orderForm">
-                            <form action="orderresult.php">
-                                <input type="hidden" name="order" value="<?=$_GET['order']?>">
-                                <input type="hidden" name="subject" value="<?=$_subject_list[$order_index]?>">
-                                <table class="data">
-                                <tr>
-                                <tr class="odd">
-                                <td><span class="required">назва запчастини</span></td>
-                                <td><input type="text" name="order_name"></td>
-                                </tr>
-                                <tr>
-                                <td><span class="required">марка та модель авто</span></td>
-                                <td><input type="text" name="auto_name"></td>
-                                </tr>
-                                <tr class="odd">
-                                <td><span class="required">рік випуску авто</span></td>
-                                <td><input type="text" name="auto_year"></td>
-                                </tr>
-                                <tr>
-                                <td><span>№ кузова авто</span></td>
-                                <td><input type="text" name="auto_body_no"></td>
-                                </tr>
-                                <tr class="odd">
-                                <td><span>VIN-код запчастини</span></td>
-                                <td><input type="text" name="vin"></td>
-                                </tr>
-                                <tr>
-                                <td><span class="required">електронна адреса</span>
-                                <td><input type="text" name="email"></td>
-                                </tr>
-                                <tr class="odd">
-                                <td><span class="required">телефон</span></td>
-                                <td><input type="text" name="phone"></td>
-                                </tr>
-                                <tr>
-                                <td><span>додати файл</span></td>
-                                <td><input type="file" name="file"></td>
-                                </tr>
-                                <tr class="odd">
-                                <td colspan="2"><span>коментар</span><br/>
-                                <textarea name="notes"></textarea></td>
-                                </tr>
-                                <tr>
-                                <td colspan="2"><input type="submit" value="Зробити замовлення"></td>
-                                </tr>
-                                </table>
-                            </form>
-                        </div>
+                        <? if ($result != '') { 
+                            include('blockorderresult.tmpl'); 
+                        } else { 
+                            include($formorder); 
+                        } ?>
                 </div>
 
-<!-- About content template -->
+<!-- Order content template -->
