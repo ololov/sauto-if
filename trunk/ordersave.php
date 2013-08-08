@@ -1,5 +1,15 @@
 <?php
 
+function redirect($result_, $order_id_, $error_)
+{
+    $host  = $_SERVER['HTTP_HOST'];
+    $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+    $returnurl = $_POST['returnurl'];
+    $extra = $returnurl.'.php?result='.$result_.'&order_id='.$order_id_.'&error='.$error_;
+    header("Location: http://$host$uri/$extra");
+    exit;
+}
+
     include('global.properties');
     include ('mysql.php');
 
@@ -34,14 +44,12 @@
                         `descr`='{$descr}',
                         `review`='{$review}'";
         $sql = mysql_query($query) or ($result = 'error');
-        if ($result == 'error') $error = $error.'помилка запису в базу даних<br/>';
+        if ($result == 'error') {
+            $error = $error.'[01] помилка запису в базу даних';
+            redirect($result, $order_id, $error);
+        }
         //get order ID
         $order_id = mysql_insert_id();
-        $host  = $_SERVER['HTTP_HOST'];
-        $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-        $returnurl = $_POST['returnurl'];
-        $extra = $returnurl.'.php?result='.$result.'&order_id='.$order_id;
-
 
         //upload order file to server
 
@@ -52,8 +60,9 @@
         if (move_uploaded_file($_FILES['filename']['tmp_name'], $uploaddir . 
             $filename)) {
         } else {
-            $error = $error.'неможливо завантажити файл';
+            $error = $error.'[02] неможливо завантажити файл "'.$filename.'"';
             $result = 'error';
+            redirect($result, $order_id, $error);
         }
 
         $filepath = $uploaddir.$filename;
@@ -82,9 +91,9 @@
 
         $fp = fopen($filepath,"r"); 
         if (!$fp) {
-            $error = $error.'неможливо знайти файл';
+            $error = $error.'[03] неможливо знайти файл "'.$filepath.'"';
             $result = 'error';
-            exit(); 
+            redirect($result, $order_id, $error);
         }
 
         $file = fread($fp, filesize($filepath)); 
@@ -102,13 +111,13 @@
 
         if (mail($to,$subject,$multipart,$mailheaders)) {
         } else {
-            $error = $error.'неможливо надіслати файл';
+            $error = $error.'[04] неможливо обробити замовлення';
             $result = 'error';
+            redirect($result, $order_id, $error);
         }
 
         //redirect to the order page
+        redirect($result, $order_id, $error);
 
-        header("Location: http://$host$uri/$extra");
-        exit;
 
 ?>
