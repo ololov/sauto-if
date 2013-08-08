@@ -2,11 +2,12 @@
 
                         <p class="info">Замовлення онлайн є найшвидшим та найпростішим способом. Але звісно Ви також можете зробити замовлення надіславши листа на електронну адресу або за телефоном</p>
                         <div id="orderFormOnline" class="orderForm">
-                            <form action="ordersave.php" method="POST">
+                            <form action="ordersave.php" method="POST" enctype="multipart/form-data">
 
                                 <input type="hidden" name="action" value="save">
                                 <input type="hidden" name="order_title" value="<?=$order_title?>">
                                 <input type="hidden" name="returnurl" value="<?=$returnurl?>">
+                                <input type="hidden" name="MAX_FILE_SIZE" value="2000">
 
                                 <div class="error" style="display: none;">тут будуть помилки валідації форми</div>
 

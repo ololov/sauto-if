@@ -3,6 +3,11 @@
     include('global.properties');
     include ('mysql.php');
 
+        $error = '';
+        $result = 'ok';
+
+        // store data to database
+
         $order_title = (isset($_POST['order_title'])) ? mysql_real_escape_string($_POST['order_title']) : '';
         $nickname = (isset($_POST['nickname'])) ? mysql_real_escape_string($_POST['nickname']) : '';
         $phone = (isset($_POST['phone'])) ? mysql_real_escape_string($_POST['phone']) : '';
@@ -28,59 +33,80 @@
                         `vin`='{$vin}',
                         `descr`='{$descr}',
                         `review`='{$review}'";
-        $result = 'ok';
         $sql = mysql_query($query) or ($result = 'error');
+        if ($result == 'error') $error = $error.'помилка запису в базу даних<br/>';
+        //get order ID
         $order_id = mysql_insert_id();
         $host  = $_SERVER['HTTP_HOST'];
         $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
         $returnurl = $_POST['returnurl'];
         $extra = $returnurl.'.php?result='.$result.'&order_id='.$order_id;
 
-$to = "gzoreslav@gmail.com"; 
-$order = $order_title.'-'.$order_id;
-$subject = "SAUTO - замовлення #".$order; 
-$cur_date = date('r');
-$filename = "order-".$order.".txt";
-$filepath = "orders/".$filename;
 
-include('email.php');
+        //upload order file to server
 
-$boundary = "--".md5(uniqid(time())); 
+        $order = $order_title.'-'.$order_id;
+        $filename = $order.".txt";
 
-$mailheaders = "MIME-Version: 1.0;\r\n"; 
-$mailheaders .="Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n"; 
+        $uploaddir = 'orders/';
+        if (move_uploaded_file($_FILES['filename']['tmp_name'], $uploaddir . 
+            $filename)) {
+        } else {
+            $error = $error.'неможливо завантажити файл';
+            $result = 'error';
+        }
 
-$mailheaders .= "From: SAUTO <order@sauto.if.ua>\r\n"; 
+        $filepath = $uploaddir.$filename;
 
-$multipart = "--$boundary\r\n"; 
-$multipart .= "Content-Type: text/html; charset=windows-1251\r\n";
-$multipart .= "Content-Transfer-Encoding: base64\r\n";    
-$multipart .= "\r\n";
-$multipart .= chunk_split(base64_encode(iconv("utf8", "windows-1251", $message)));
 
-$fp = fopen($filepath,"r"); 
-if (!$fp) {
-    print "Неможливо знайти файл"; 
-    exit(); 
-}
+        //send email to the order service
 
-$file = fread($fp, filesize($filepath)); 
-fclose($fp);
+        $to = "gzoreslav@gmail.com, sauto@mail.ua"; 
+        $subject = "SAUTO - замовлення #".$order; 
+        $cur_date = date('r');
+        //email template
+        include('email.php');
 
-$message_part = "\r\n--$boundary\r\n"; 
-$message_part .= "Content-Type: application/octet-stream; name=\"$filename\"\r\n";  
-$message_part .= "Content-Transfer-Encoding: base64\r\n"; 
-$message_part .= "Content-Disposition: attachment; filename=\"$filename\"\r\n"; 
-$message_part .= "\r\n";
-$message_part .= chunk_split(base64_encode($file));
-$message_part .= "\r\n--$boundary--\r\n";
+        $boundary = "--".md5(uniqid(time())); 
 
-$multipart .= $message_part;
+        $mailheaders = "MIME-Version: 1.0;\r\n"; 
+        $mailheaders .="Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n"; 
 
-if (mail($to,$subject,$multipart,$mailheaders)) {
-} else {
-    echo "some error happen";
-}
+        $mailheaders .= "From: SAUTO <order@sauto.if.ua>\r\n"; 
+
+        $multipart = "--$boundary\r\n"; 
+        $multipart .= "Content-Type: text/html; charset=windows-1251\r\n";
+        $multipart .= "Content-Transfer-Encoding: base64\r\n";    
+        $multipart .= "\r\n";
+        $multipart .= chunk_split(base64_encode(iconv("utf8", "windows-1251", $message)));
+
+        $fp = fopen($filepath,"r"); 
+        if (!$fp) {
+            $error = $error.'неможливо знайти файл';
+            $result = 'error';
+            exit(); 
+        }
+
+        $file = fread($fp, filesize($filepath)); 
+        fclose($fp);
+
+        $message_part = "\r\n--$boundary\r\n"; 
+        $message_part .= "Content-Type: application/octet-stream; name=\"$filename\"\r\n";  
+        $message_part .= "Content-Transfer-Encoding: base64\r\n"; 
+        $message_part .= "Content-Disposition: attachment; filename=\"$filename\"\r\n"; 
+        $message_part .= "\r\n";
+        $message_part .= chunk_split(base64_encode($file));
+        $message_part .= "\r\n--$boundary--\r\n";
+
+        $multipart .= $message_part;
+
+        if (mail($to,$subject,$multipart,$mailheaders)) {
+        } else {
+            $error = $error.'неможливо надіслати файл';
+            $result = 'error';
+        }
+
+        //redirect to the order page
 
         header("Location: http://$host$uri/$extra");
         exit;
