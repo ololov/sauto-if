@@ -54,7 +54,7 @@ function redirect($result_, $order_id_, $error_)
         //upload order file to server
 
         $order = $order_title.'-'.$order_id;
-        $filename = $order.".txt";
+        $filename = $order."___".$_FILES['filename']['name'];
 
         $uploaddir = 'orders/';
         if (move_uploaded_file($_FILES['filename']['tmp_name'], $uploaddir . 
