@@ -38,9 +38,12 @@
 
 $to = "gzoreslav@gmail.com"; 
 $order = $order_title.'-'.$order_id;
-$subject = "SAUTO - iCars order #".$order; 
+$subject = "SAUTO - замовлення #".$order; 
 $cur_date = date('r');
-$message = $review; 
+$filename = "order-".$order.".txt";
+$filepath = "orders/".$filename;
+
+include('email.php');
 
 $boundary = "--".md5(uniqid(time())); 
 
@@ -55,7 +58,29 @@ $multipart .= "Content-Transfer-Encoding: base64\r\n";
 $multipart .= "\r\n";
 $multipart .= chunk_split(base64_encode(iconv("utf8", "windows-1251", $message)));
 
-mail($to,$subject,$multipart,$mailheaders);
+$fp = fopen($filepath,"r"); 
+if (!$fp) {
+    print "Неможливо знайти файл"; 
+    exit(); 
+}
+
+$file = fread($fp, filesize($filepath)); 
+fclose($fp);
+
+$message_part = "\r\n--$boundary\r\n"; 
+$message_part .= "Content-Type: application/octet-stream; name=\"$filename\"\r\n";  
+$message_part .= "Content-Transfer-Encoding: base64\r\n"; 
+$message_part .= "Content-Disposition: attachment; filename=\"$filename\"\r\n"; 
+$message_part .= "\r\n";
+$message_part .= chunk_split(base64_encode($file));
+$message_part .= "\r\n--$boundary--\r\n";
+
+$multipart .= $message_part;
+
+if (mail($to,$subject,$multipart,$mailheaders)) {
+} else {
+    echo "some error happen";
+}
 
         header("Location: http://$host$uri/$extra");
         exit;
