@@ -33,39 +33,46 @@ a, a:focus, a:active, a:hover {text-decoration: underline; color: #2b1b17;}
 a:hover {text-decoration: none; color: #b1b1b1;}
 
 .content {padding: 0 25px 15px 0; background-color: white; color: #333; margin: 10px 0; bborder-radius: 6px; bborder: 1px solid #ddd;}
-.content h1 {margin: 0 0 6px 0;}
+h1 {margin: 0 0 6px 0; font-size: 18px;}
 #contentNews {bbackground-color: #e5e5e5; float: left; width: 250px; color: #333;}
 
+
+#sectionMain, #frameHot {width: 590px; float: left; padding: 0; color: #333; margin: 0;}
 #frameHot {
-    width: 560px;
     border-style: none;
-    margin-top: 5px;
     height: 620px;
+    font-family: Verdana, Arial; 
+    margin: 15px 0 0 0;
+    padding: 0;
+    font-size: 14px;
+}
+body.#frameHot {
+    font-family: Verdana, Arial; 
+    padding: 0;
+    font-size: 14px;
+    color: #333;
 }
 h1 {border-bottom: solid 2px #e74c3c; padding: 0;}
+h2 {font-size: 16px; font-weight: bold;}
+h3 {font-size: 14px; font-weight: bold;}
 
-#contentAbout {;}
-#contentAbout h1 {border-bottom: solid 2px #e74c3c; padding: 0;}
-#contentDelivery {}
-#contentDelivery h1 {border-bottom: solid 2px #e74c3c; padding: 0;}
-#contentArticles {}
-#contentArticles h1 {border-bottom: solid 2px #e74c3c; padding: 0;}
-#contentCatalog {}
-
-#sectionMain {width: 590px; float: left; padding: 0; color: #333; margin: 0;}
-#sectionMain h2 {font-size: 16px; font-weight: bold;}
-#sectionMain h3 {font-size: 14px; font-weight: bold;}
+#frameWrapper {color: #333; margin-right: 7px;}
 
 #sectionMain2 {width: 840px; float: left; padding: 0; color: #333; margin: 0;}
 
-#contentPartners {width: 140px;
+#contentPartners {width: 155px;
 float: left;
-padding-right: 20px;
-padding: 5px 7px 5px 7px;
-border-radius: 5px;
 margin: 10px 20px 5px 0;
-border: solid 1px #ddd;}
+}
+
 #contentPartners a {display: block; width: 140px; margin-bottom: 12px; text-indent: -9999px; border-bottom: 1px dotted #ddd; padding-bottom: 6px;}
+
+#sidePartners {
+border: solid 1px #ddd;
+border-radius: 6px;
+padding: 5px 7px;
+}
+
 span.sideHeader {text-align: center;
 color: white;
 display: block;
@@ -142,7 +149,7 @@ margin-bottom: 20px;}
 
 #sectionMain h1 {font-size: 20px; padding-top: 8px;}
 
-#phone {width: 120px; margin-top: 10px; padding: 7px 15px; color: #333; position: absolute; font-size: 12px; font-weight: bold; right: -42px; border: 1px solid #ddd; border-radius: 5px; background-color: white;}
+#phone {width: 160px; margin-top: 10px; padding: 14px 15px; color: #333; position: absolute; font-size: 12px; font-weight: bold; right: -42px; border: 1px solid #ddd; border-radius: 5px; background-color: white;}
 
 #footerMain {width: 1024px; height: 60px; float: left; border-top: solid 2px #ddd; background: url("images/bumper.png") no-repeat 710px -68px}
 .copyText {display: block; float: right; font-size: 10px; padding: 5px; color: #333;}
@@ -155,7 +162,7 @@ table.data tr.odd td {background-color: #f5f5f5;}
 .promo {width: 260px; padding: 10px 10px 10px 0; float: left;}
 
 h1#adminPanel {width: 1000px; padding: 3px; color: white; background-color: red; float: left; text-align: center;}
-#promoTextArea {width: 1000px; height: 500px;}
+#TextArea {width: 1000px; height: 500px;}
 #sectionAdmin {width: 1010px;}
 
 span.info {display: block;
@@ -206,7 +213,7 @@ padding: 5px;
 
 .info {
 display: block;
-width: 300px;
+width: 340px;
 float: right;
 font-size: 12px;
 padding: 5px;
@@ -242,25 +249,26 @@ margin-top: 20px;
 .required {color: red;}
 
 .editText {
-    width: 280px;
     border: 1px #ddd solid;
     padding: 2px;
     color: #333;
 }
 
+.editText, .uploadFile, .editDescr {width: 280px; float: left;}
+
 .orderHelper {
-    margin-left: 165px;
     font-size: 11px;
     color: #999;
-    width: 280px;
-    padding-top: 3px;
+    width: 350px;
+    padding: 0 0 10px 0;
+    float: right;
 }
 
 .editDescr {
-    width: 280px;
     border: 1px #ddd solid;
     padding: 2px;
     height: 120px;
+    color: #333;
 }
 
 .orderBlock {
@@ -290,3 +298,9 @@ margin-top: 20px;
     width: 450px;
     border-bottom: 1px solid #e74c3c;
 }
+
+.phoneNo, .email, .skype {min-height: 16px; padding: 4px 0 0 23px;}
+#ks {background: url(images/ks20.png) no-repeat;}
+#mts {background: url(images/mts20.png) no-repeat;}
+.email {background: url(images/email_16.png) no-repeat 3px 2px;}
+.skype {background: url(images/skype.png) no-repeat 3px 2px;}

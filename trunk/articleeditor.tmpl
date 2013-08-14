@@ -17,7 +17,7 @@
         <script src="/tinymce/tinymce.min.js"></script>
         <script>
                 tinymce.init({
-                    selector:'#TextArea',
+                    selector:'#articleTextArea',
                     plugins: [
                         "advlist autolink lists link image charmap print preview hr anchor pagebreak",
                         "searchreplace wordcount visualblocks visualchars code fullscreen",
@@ -42,7 +42,7 @@
             <? if ($_POST['arch'] == 'yes') { echo '<span class="info">копію зроблено успішно</span>'; } ?>
             <? if ($_POST['save'] == 'yes') { echo '<span class="info">зміни збережено</span>'; } ?>
             </div>
-            <textarea name="promoText" id="TextArea"><?=$promocontent?></textarea>
+            <textarea name="promoText" id="articleTextArea"></textarea>
         </form>
     </div>
 

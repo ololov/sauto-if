@@ -14,11 +14,13 @@
 
             <? include('global.properties'); ?>
 
-            <? include('socialpanel.tmpl'); ?>
-            <header><h1>Акційні пропозиції</h1></header>
-            <? include('contentpromo.tmpl'); ?>
-            <header><h1>А також</h1></header>
-            <? include('contentpromo2.tmpl'); ?>
+            <div id="frameWrapper">
+                <? include('socialpanel.tmpl'); ?>
+                <header><h1>Акційні пропозиції</h1></header>
+                <? include('contentpromo.tmpl'); ?>
+                <header><h1>А також</h1></header>
+                <? include('contentpromo2.tmpl'); ?>
+            </div>
 
     </body>
 </html>
