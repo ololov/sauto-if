@@ -1,0 +1,7 @@
+body {
+  background: 
+    url(images/krylo.png) left 140px no-repeat, 
+    url(images/hodova.png) right 150px no-repeat,
+    url(images/wheels.png) left bottom no-repeat,
+    url(images/bumper.png) right bottom no-repeat;
+}
