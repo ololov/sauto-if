@@ -15,14 +15,14 @@
         <script>
 
             function AddBackground() {
-                if(document.width > 1150) {
-                    console.log('screen>1024', document.width);
+                if($(document).width() > 1150) {
+                    console.log($(document).width());
                     if ($("#background_css").length <= 0) {
                         console.log('#background_css does not exist, will be added');
                         $("head").append("<link id='background_css' rel='stylesheet' type='text/css' href='styles/background1.css' />");
                     }
                 } else {
-                    console.log('screen<1024', document.width);
+                    console.log($(document).width());
                     if ($("#background_css").length > 0) {
                         console.log('#background_css exist, will be removed');
                         $('#background_css').remove();
