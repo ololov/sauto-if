@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <title><?=$title?></title>
         <link rel="stylesheet" type="text/css" href="styles/main.css"/>
-        <link rel="stylesheet" type="text/css" href="styles/background1.css"/>
         <link rel="image_src" href="styles/images/sociallogo.png" />
         <link rel="icon" href="favicon.ico" type="image/x-icon"/>
         <meta name="keywords" content="SAUTO, Автозапчастини, Автозапчасти, Куплю автозапчастини, Куплю автозапчастин, Автобазар, Автобазар Україна, Амортизатор, ходова частина, ходовая часть, фільтр, салон, шини, покришки, покрышки, тяга, кузов, ремкоплект, свечи зажигания, свічки, акомулятор, щеплення, сцепление, карбюратор, инжектор, демпферний диск, радиатор, радіатор, стабилизатор, стабілізатор, шрус, шарова опора, ричав, рычаг, передня вісь, задня вісь, передняя ось, задняя ось, стойки, двигун, двигатель, диски, титановые диски, глушник, глушитель, FEBI BILSTEIN, BOSH, NGK, KNECHT, PURFLUX, FILTRON, 4MAX, RUVILLE, LEMFÖRDER, DELPHI, MOOG, TRW, CORTECO, TOPRAN, SASIC, ORIGINAL, AUTLOG, FORTUNE LINE, SACHS, MONROE, KYB, MAGNUM TECHNOLOGY, BILSTEIN, LUK, VALEO, NATIONAL, EXEDY, NEXUS, ATE, TEXTAR, FERODO, BREMBO, ICER, LPR, ROULUNDS BRAKING, JC PREMIUM, QUICK BRAKE, SKF, MAGNETI MARELLI, HEPU, THERMOTEC, VAN WEZEL, SWF, DENSO, TRICO, KOREA, OEOE, CASTROL, LIQUI MOLY, COMMA, MOBIL, MOTUL, TOTAL, SHELL, BOSAL, THULE, STEINHOF, K&amp;N Filters, BTA,  SEALEY, Alfa Romeo, Audi, Chery, Chevrolet, Chrysler, Citroen, Dacia, Daewoo, DAF, FAW, Ford, Gee, Great Wall, Honda, Kia, LEXUS, Lifan, Mitsubishi, Nissan, Opel, Renault, Rove, Saipa, Samand, Seat, Skoda, SsangYong, Suzuki, Talbot, BYD, Volkswagen, Volvo, Zongshin, ІЖ, АЗЛК, ВАЗ, ГАЗ, ГАЗел, ЗАЗ, КАМАЗ, Лада, ЛуАЗ, МАЗ, Москвич, УАЗ, YAMAHA SEALEY, KTM, Ducati, SUZUKI, KAWASAKI, BMW, Harley Davidson,  Мотозапчасти, Мотозапчастини"/>
@@ -14,9 +13,30 @@
     </head>
     <body>
         <script>
+
+            function AddBackground() {
+                if(document.width > 1150) {
+                    console.log('screen>1024', document.width);
+                    if ($("#background_css").length <= 0) {
+                        console.log('#background_css does not exist, will be added');
+                        $("head").append("<link id='background_css' rel='stylesheet' type='text/css' href='styles/background1.css' />");
+                    }
+                } else {
+                    console.log('screen<1024', document.width);
+                    if ($("#background_css").length > 0) {
+                        console.log('#background_css exist, will be removed');
+                        $('#background_css').remove();
+                    }
+                }
+            }
+
             $(document).ready(function(){
                 $(function (){
                     $("#back-top").hide();
+                    AddBackground();
+                    $(window).resize(function (){
+                        AddBackground();
+                    });
                     $(window).scroll(function (){
                         if ($(this).scrollTop() > 300){
                             $("#back-top").fadeIn();
@@ -32,6 +52,7 @@
                     });
                 });
             });
+
         </script>
         <? include('socialinit.tmpl'); ?>
         <? include('googleanalytics.tmpl'); ?>
