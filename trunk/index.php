@@ -10,7 +10,7 @@
     for ($i = 0; $i < $count; $i++) {
         $articles[$i] = trim($articles[$i]);
     }
-    $maincontent_tmpl = 'framehot';
+    $maincontent_tmpl = 'contenthot';
 
     include('index.tmpl');
 
