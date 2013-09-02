@@ -297,3 +297,5 @@ border-radius: 0;
 label.error {
     float: left;
 }
+
+.orderWrapper {float: left; width: 285px;}
