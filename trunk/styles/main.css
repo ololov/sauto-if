@@ -202,9 +202,10 @@ border: 1px solid orange;
 
 .error {
 width: 650px;
-margin-top: 3px;
+margin-bottom: 3px;
 color: red;
 font-size: 11px;
+padding-left: 165px;
 }
 
 .ok {
@@ -219,7 +220,7 @@ margin-top: 20px;
     width: 160px;
     float: left;
     text-align: right;
-    padding: 7px 5px 0 0;
+    padding: 3px 5px 0 0;
 }
 
 .required {color: red;}
