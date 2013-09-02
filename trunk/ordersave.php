@@ -54,18 +54,21 @@ function redirect($result_, $order_id_, $error_)
         //upload order file to server
 
         $order = $order_title.'-'.$order_id;
-        $filename = $order."___".$_FILES['filename']['name'];
 
         $uploaddir = 'orders/';
-        if (move_uploaded_file($_FILES['filename']['tmp_name'], $uploaddir . 
-            $filename)) {
-        } else {
-            $error = $error.'[02] неможливо завантажити файл "'.$filename.'"';
-            $result = 'error';
-            redirect($result, $order_id, $error);
+        $uploader_count = $_POST['uploader_count'];
+        $files = array();
+        for ($i = 0; $i < $uploader_count; $i++ ) {
+            $files[] = $order."___".$_POST['uploader_'.$i.'_name'];
+            if (rename('uploads/'.$_POST['uploader_'.$i.'_name'], $uploaddir . 
+                $files[$i])) {
+            } else {
+                $error = $error.'[02] неможливо завантажити файл "'.$filename.'"';
+                $result = 'error';
+                redirect($result, $order_id, $error);
+            }
         }
 
-        $filepath = $uploaddir.$filename;
 
 
         //send email to the order service
@@ -88,7 +91,8 @@ function redirect($result_, $order_id_, $error_)
         $multipart .= "Content-Transfer-Encoding: base64\r\n";    
         $multipart .= "\r\n";
         $multipart .= chunk_split(base64_encode(iconv("utf8", "windows-1251", $message)));
-
+//BEGIN FILE ATTACH
+        $filepath = $uploaddir.$filename;
         $fp = fopen($filepath,"r"); 
         if (!$fp) {
             $error = $error.'[03] неможливо знайти файл "'.$filepath.'"';
@@ -106,6 +110,7 @@ function redirect($result_, $order_id_, $error_)
         $message_part .= "\r\n";
         $message_part .= chunk_split(base64_encode($file));
         $message_part .= "\r\n--$boundary--\r\n";
+//END FILE ATTACH
 
         $multipart .= $message_part;
 
