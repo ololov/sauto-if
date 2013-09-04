@@ -1,51 +1,11 @@
-<!-- Order content template -->
+<!-- Order Details Online content template -->
 
-                        <p class="info">Замовлення онлайн є найшвидшим та найпростішим способом. Але звісно Ви також можете зробити замовлення надіславши листа на електронну адресу або за телефоном</p>
-                        <div id="orderFormOnline" class="orderForm">
-                            <form action="orderonlinesave.php" method="POST">
+    <!-- jquery validations script -->
+    <script type="text/javascript" src="validate_online.js"></script>
 
-                                <input type="hidden" name="action" value="save">
-                                <input type="hidden" name="order_title" value="<?=$order_title?>">
-
-                                <div class="error" style="display: none;">тут будуть помилки валідації форми</div>
-
-
-                                <div class="orderBlock">
-                                    <h3>Контактна інформація</h3>
-                                </div>
-
-                                <div class="orderBlock" id="orderNicknameBlock">
-                                    <label for="editNickname">
-                                        <span class="orderTitle">Ваше ім&apos;я:
-                                            <span class="required">*</span>
-                                        </span>
-                                    </label>
-                                    <input type="text" class="editText" maxlength="50" name="nickname">
-                                </div>
-
-                                <div class="orderBlock" id="orderEmailBlock">
-                                    <label for="editEmail">
-                                        <span class="orderTitle">Email:
-                                            <span class="required">*</span>
-                                        </span>
-                                    </label>
-                                    <input type="text" class="editText" maxlength="50" name="email">
-                                    <div class="orderHelper">Будь-ласка вказуйте вірний email. Так наші менеджери зможуть швидко з вами зв&apos;язатись. Ми не передаємо ваш email третім особам і не використовуємо його для розсилки.</div>
-                                </div>
-
-                                <div class="orderBlock" id="orderPhoneBlock">
-                                    <label for="editPhone">
-                                        <span class="orderTitle">Номер телефону:
-                                            <span class="required">*</span>
-                                        </span>
-                                    </label>
-                                    <input type="text" class="editText" maxlength="50" name="phone">
-                                    <div class="orderHelper">Будь-ласка вказуйте вірний номер телефону. Так наші менеджери зможуть швидко з вами зв&apos;язатись. Ми не передаємо ваш номер телефону третім особам і не використовуємо його для розсилки.</div>
-                                </div>
-
-                                <div class="orderBlock">
-                                    <h3>Деталі замовлення</h3>
-                                </div>
+    <div class="orderBlock">
+        <h3>Деталі замовлення</h3>
+    </div>
 
                                 <div class="orderBlock" id="orderDetailBlock">
                                     <label for="editEmail">
@@ -56,6 +16,7 @@
                                     <input type="text" class="editText" maxlength="50" name="detail">
                                     <div class="orderHelper">Якщо вам необхідно замовити декілька деталей, чи різні деталі, то будь-лака вказуйте це у примітках.</div>
                                 </div>
+    <div style="clear: both;"></div>
 
                                 <div class="orderBlock" id="orderAutoBlock">
                                     <label for="editEmail">
@@ -65,6 +26,7 @@
                                     </label>
                                     <input type="text" class="editText" maxlength="50" name="auto">
                                 </div>
+    <div style="clear: both;"></div>
 
                                 <div class="orderBlock" id="orderAutoYearBlock">
                                     <label for="editEmail">
@@ -74,6 +36,7 @@
                                     </label>
                                     <input type="text" class="editText" maxlength="50" name="autoyear">
                                 </div>
+    <div style="clear: both;"></div>
 
                                 <div class="orderBlock" id="orderAutoBodyNoBlock">
                                     <label for="editEmail">
@@ -83,6 +46,7 @@
                                     </label>
                                     <input type="text" class="editText" maxlength="50" name="autobodyno">
                                 </div>
+    <div style="clear: both;"></div>
 
                                 <div class="orderBlock" id="orderVinBlock">
                                     <label for="editEmail">
@@ -92,42 +56,15 @@
                                     </label>
                                     <input type="text" class="editText" maxlength="50" name="vin">
                                 </div>
+    <div style="clear: both;"></div>
 
-                                <div class="orderBlock" id="orderFile">
-                                    <label for="editFile">
-                                        <span class="orderTitle">Файл-замовлення:
-                                            <span class="required">*</span>
-                                        </span>
-                                    </label>
-                                    <input type="file" name="filename" size="18">
-                                    <div class="orderHelper">Файл-замовлення з терміналу наших партнерів</div>
-                                </div>
-
-                                <div class="orderBlock" id="orderDescrBlock">
+    <div class="orderBlock" id="orderDescrBlock">
                                     <label for="editDescr">
                                         <span class="orderTitle">Примітки щодо замовлення:</span>
                                     </label>
-                                    <textarea class="editDescr" name="descr" cols="50"></textarea></br>
-                                    <div class="orderHelper">Будь-ласка вказуйте в коментарі додаткові параметри замовлення - колір, бажану службу доставки, методи оплати, тощо.</div>
-                                </div>
+                                    <textarea class="editDescr" name="descr" cols="50"></textarea>
+                                    <div class="orderHelper">Будь-ласка вказуйте в коментарі додаткові параметри замовлення якщо необхідно.</div>
+    </div>
+    <div style="clear: both;"></div>
 
-                                <div class="orderBlock">
-                                    <h3>Додаткова інформація</h3>
-                                </div>
-
-                                <div class="orderBlock" id="orderReviewBlock">
-                                    <label for="editDescr">
-                                        <span class="orderTitle">Ваші відгуки щодо роботи нашого сайту:</span>
-                                    </label>
-                                    <textarea class="editDescr" name="review" cols="50"></textarea></br>
-                                    <div class="orderHelper">Ваш об&apos;єктивний відгук допоможе покращити наш сайт. Дана інформація ніяк не буде використана при обробці замовлення.</div>
-                                </div>
-
-                                <div class="orderBlock" id="orderSubmitBlock">
-                                    <input class="orderSubmit" type="submit" value="Зробити замовлення">
-                                </div>
-
-                            </form>
-                        </div>
-
-<!-- Order content template -->
+<!-- Order Details Online content template -->
