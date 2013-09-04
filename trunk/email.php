@@ -29,7 +29,7 @@ $message =
             </tr>
             <tr>
                 <td style="padding: 3px;">Замовлення:</td>
-                <td style="padding: 3px;">(див. вкладенний файл '.$filename.') abo <a href="http://www.sauto.if.ua/orders/'.$filename.'">скачати</a></td>
+                <td style="padding: 3px;">див. вкладений(і) файл(и)</td>
             </tr>
             <tr>
                 <td style="padding: 3px;">Примітки щодо замовлення:</td>
@@ -37,7 +37,6 @@ $message =
             </tr>
         </table>
         <p>Замовлено '.$cur_date.'</p>
-        <p>Детально на сайті <a href="#">буде згодом</a></p>
         <p><strong>Відгук замовника про сайт SAUTO:</strong></p>
         <p>'.$review.'</p>
         <hr/>

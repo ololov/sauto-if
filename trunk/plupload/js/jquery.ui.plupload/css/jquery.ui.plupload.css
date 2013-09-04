@@ -27,6 +27,13 @@ div.plupload div.plupload_header {border-width: 0 0 1px 0; position: relative; d
 	cursor:pointer;	
 }
 
+.plupload_file .ui-icon-circle-minus {
+	background-image: url('../img/delete.gif');
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+}
+
 .plupload_header_content {
 	background-image: url('../img/plupload.png');
 	background-repeat: no-repeat;

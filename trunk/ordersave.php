@@ -10,6 +10,45 @@ function redirect($result_, $order_id_, $error_)
     exit;
 }
 
+function mail_to($to, $from, $subj, $text, $files=null){
+    $boundary = md5(uniqid(time()));
+    $headers[] ="MIME-Version: 1.0";
+    $headers[] ="Content-Type: multipart/mixed;boundary=\"$boundary\"; type=\"text/html;\"";
+    $headers[] ="From: ".$from;
+    $headers[] ="Reply-To: ".$from;
+    $headers[] ="Return-Path: ".$from;
+    $headers[] ="X-Mailer: PHP/" . phpversion();
+
+    $multipart[]= "--".$boundary;
+    $multipart[]= "Content-Type: text/html; charset=utf-8";
+    $multipart[]= "Content-Transfer-Encoding: Quot-Printed";
+    $multipart[]= ""; // раздел между заголовками и телом html-части
+    $multipart[]= $text;
+    $multipart[]= "";
+
+    if ((is_array($files))&&(!empty($files)))
+        {
+        foreach($files as $filename => $filecontent)
+            {
+            $multipart[]="--".$boundary;
+            $multipart[]= "Content-Type: application/octet-stream; name=\"".$filename."\"";
+            $multipart[]= "Content-Transfer-Encoding: base64";
+            $multipart[]= "Content-Disposition: attachment; filename=\"".$filename."\"";
+            $multipart[]= "";
+            $multipart[]= chunk_split(base64_encode($filecontent));
+            }
+    }
+
+    $multipart[]= "--$boundary--";
+    $multipart[]= "";
+    $headers=implode("\r\n", $headers);
+    $multipart=implode("\r\n", $multipart);
+    if (mb_detect_encoding($subj, "UTF-8")==FALSE)
+    $subj= mb_encode_mimeheader($subj,"UTF-8", "B", "\n");
+
+    return mail($to, $subj, $multipart, $headers);
+}
+
     include('global.properties');
     include ('mysql.php');
 
@@ -59,9 +98,9 @@ function redirect($result_, $order_id_, $error_)
         $uploader_count = $_POST['uploader_count'];
         $files = array();
         for ($i = 0; $i < $uploader_count; $i++ ) {
-            $files[] = $order."___".$_POST['uploader_'.$i.'_name'];
-            if (rename('uploads/'.$_POST['uploader_'.$i.'_name'], $uploaddir . 
-                $files[$i])) {
+            //$files[] = $uploaddir.$order."___".$_POST['uploader_'.$i.'_name'];
+            if (rename('uploads/'.$_POST['uploader_'.$i.'_name'], $uploaddir.$order."___".$_POST['uploader_'.$i.'_name'])) {
+                $files[$order."___".$_POST['uploader_'.$i.'_name']] = file_get_contents($uploaddir.$order."___".$_POST['uploader_'.$i.'_name']);;
             } else {
                 $error = $error.'[02] неможливо завантажити файл "'.$filename.'"';
                 $result = 'error';
@@ -71,50 +110,23 @@ function redirect($result_, $order_id_, $error_)
 
 
 
-        //send email to the order service
+        //init mailing data
 
         $to = "gzoreslav@gmail.com, sauto@mail.ua"; 
-        $subject = "SAUTO - замовлення #".$order; 
+        $from="SAUTO <order@sauto.if.ua>";
+        $subj = "SAUTO - замовлення #".$order; 
         $cur_date = date('r');
-        //email template
+        //$message -> email template
         include('email.php');
 
         $boundary = "--".md5(uniqid(time())); 
 
-        $mailheaders = "MIME-Version: 1.0;\r\n"; 
-        $mailheaders .="Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n"; 
+//$path_to_file=dirname(__FILE__).DIRECTORY_SEPARATOR."text.txt";
+//$files = array('text.txt' => file_get_contents($path_to_file));
 
-        $mailheaders .= "From: SAUTO <order@sauto.if.ua>\r\n"; 
+        //send email to the order service
 
-        $multipart = "--$boundary\r\n"; 
-        $multipart .= "Content-Type: text/html; charset=windows-1251\r\n";
-        $multipart .= "Content-Transfer-Encoding: base64\r\n";    
-        $multipart .= "\r\n";
-        $multipart .= chunk_split(base64_encode(iconv("utf8", "windows-1251", $message)));
-//BEGIN FILE ATTACH
-        $filepath = $uploaddir.$filename;
-        $fp = fopen($filepath,"r"); 
-        if (!$fp) {
-            $error = $error.'[03] неможливо знайти файл "'.$filepath.'"';
-            $result = 'error';
-            redirect($result, $order_id, $error);
-        }
-
-        $file = fread($fp, filesize($filepath)); 
-        fclose($fp);
-
-        $message_part = "\r\n--$boundary\r\n"; 
-        $message_part .= "Content-Type: application/octet-stream; name=\"$filename\"\r\n";  
-        $message_part .= "Content-Transfer-Encoding: base64\r\n"; 
-        $message_part .= "Content-Disposition: attachment; filename=\"$filename\"\r\n"; 
-        $message_part .= "\r\n";
-        $message_part .= chunk_split(base64_encode($file));
-        $message_part .= "\r\n--$boundary--\r\n";
-//END FILE ATTACH
-
-        $multipart .= $message_part;
-
-        if (mail($to,$subject,$multipart,$mailheaders)) {
+        if (mail_to($to, $from, $subj, $message, $files)) {
         } else {
             $error = $error.'[04] неможливо обробити замовлення';
             $result = 'error';
@@ -123,6 +135,5 @@ function redirect($result_, $order_id_, $error_)
 
         //redirect to the order page
         redirect($result, $order_id, $error);
-
 
 ?>

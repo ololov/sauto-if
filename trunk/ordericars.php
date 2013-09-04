@@ -10,6 +10,7 @@
     $result = $_GET['result'];
     $error = $_GET['error'];
     $order_id = $_GET['order_id'];
+    $key = $_GET['key'];
     $order_title = $_order_id[$order_index];
     $returnurl = $_order_url[$order_index];
     $formorder = 'formorder.tmpl';
