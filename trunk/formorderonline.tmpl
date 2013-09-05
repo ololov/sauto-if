@@ -38,33 +38,54 @@
                                 </div>
     <div style="clear: both;"></div>
 
+    <div class="hideAddParams" onclick="$('.addParams').toggle();">показати / заховати додаткові параметри замовлення</div>
+
+    <div class="addParams" style="display: none;">
                                 <div class="orderBlock" id="orderAutoBodyNoBlock">
                                     <label for="editEmail">
                                         <span class="orderTitle">Номер кузова:
-                                            <span class="required">*</span>
                                         </span>
                                     </label>
                                     <input type="text" class="editText" maxlength="50" name="autobodyno">
                                 </div>
-    <div style="clear: both;"></div>
+        <div style="clear: both;"></div>
 
                                 <div class="orderBlock" id="orderVinBlock">
                                     <label for="editEmail">
                                         <span class="orderTitle">VIN-код запчастини:
-                                            <span class="required">*</span>
                                         </span>
                                     </label>
                                     <input type="text" class="editText" maxlength="50" name="vin">
                                 </div>
-    <div style="clear: both;"></div>
+        <div style="clear: both;"></div>
 
-    <div class="orderBlock" id="orderDescrBlock">
+        <div class="orderBlock" id="orderFile">
+                                    <label for="editFile">
+                                        <span class="orderTitle">Файли:
+                                        </span>
+                                    </label>
+                                    <div class="orderWrapper">
+                                        <div id="uploader">
+                                            <p>Ваш браузер не підтримує завантаження файлів</p>
+                                        </div>
+                                    </div>
+                                    <div class="orderHelper">Додатковийі файли до замовлення (якщо необхідно)</div>
+        </div>
+
+        <!-- uploader script body -->
+        <?php include('uploader.tmpl'); ?>
+        <div style="clear: both;"></div>
+
+
+        <div class="orderBlock" id="orderDescrBlock">
                                     <label for="editDescr">
                                         <span class="orderTitle">Примітки щодо замовлення:</span>
                                     </label>
                                     <textarea class="editDescr" name="descr" cols="50"></textarea>
                                     <div class="orderHelper">Будь-ласка вказуйте в коментарі додаткові параметри замовлення якщо необхідно.</div>
+        </div>
+        <div style="clear: both;"></div>
     </div>
-    <div style="clear: both;"></div>
+
 
 <!-- Order Details Online content template -->

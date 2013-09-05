@@ -300,3 +300,14 @@ label.error {
 }
 
 .orderWrapper {float: left; width: 285px;}
+
+.hideAddParams {
+padding: 4px 4px 4px 30px;
+background: url(images/arrowupdown.png) no-repeat 6px 3px #eee;
+margin-top: 5px;
+cursor: pointer;
+}
+
+.addParams, .addReview {
+background-color: #f9f9f9;
+}

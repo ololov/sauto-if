@@ -17,6 +17,7 @@
     $formorderdetails = 'formorderonline.tmpl';
     $content_tmpl = 'short_content';
     $maincontent_tmpl = 'contentorder';
+    $online = true;
 
     include('index.tmpl');
 

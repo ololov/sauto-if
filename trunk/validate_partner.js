@@ -24,10 +24,6 @@ $(document).ready(function() {
 	
 	var validator = $("#order").validate({
 		rules: {
-			nickname: {
-				required: true,
-				minlength: 3
-				},
 			email: {
 				required: true,
 				email: true
@@ -39,10 +35,6 @@ $(document).ready(function() {
             uploader_count: "check_files"
 		},
 		messages:{
-			nickname:{
-				required: "будь-ласка, введіть ваше ім&apos;я",
-				minlength: "ім&apos;я повинно містити більше ніж 2 символи",
-			},
 			email:{
 				required: "будь-ласка, введіть ваш email",
 				email: "email введений невірно",
@@ -51,7 +43,6 @@ $(document).ready(function() {
 			uploader_count: "потрібно завантажити щонайменше 1 файл"
 		},
 		errorPlacement: function(error, element) {
-			if (element.attr("name") == "nickname") error.insertBefore($("#orderNicknameBlock"));
 			if (element.attr("name") == "phone") error.insertBefore($("#orderPhoneBlock"));
 			if (element.attr("name") == "email") error.insertBefore($("#orderEmailBlock"));
 			if (element.attr("name") == "uploader_count") error.insertBefore($("#orderFile"));

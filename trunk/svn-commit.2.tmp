@@ -1,0 +1,12 @@
+
+--This line, and those below, will be ignored--
+
+D    validate.js
+AM   orderonline.php
+M    formorder.tmpl
+M    formorderonline.tmpl
+M    index.tmpl
+M    formorderpartner.tmpl
+AM   validate_online.js
+A    uploader.tmpl
+AM   validate_partner.js

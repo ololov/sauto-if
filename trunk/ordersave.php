@@ -57,17 +57,19 @@ function mail_to($to, $from, $subj, $text, $files=null){
 
         // store data to database
 
-        $order_title = (isset($_POST['order_title'])) ? mysql_real_escape_string($_POST['order_title']) : '';
-        $nickname = (isset($_POST['nickname'])) ? mysql_real_escape_string($_POST['nickname']) : '';
-        $phone = (isset($_POST['phone'])) ? mysql_real_escape_string($_POST['phone']) : '';
-        $email = (isset($_POST['email'])) ? mysql_real_escape_string($_POST['email']) : '';
-        $detail = (isset($_POST['detail'])) ? mysql_real_escape_string($_POST['detail']) : '';
-        $auto = (isset($_POST['auto'])) ? mysql_real_escape_string($_POST['auto']) : '';
-        $autoyear = (isset($_POST['autoyear'])) ? mysql_real_escape_string($_POST['autoyear']) : '';
-        $autobodyno = (isset($_POST['autobodyno'])) ? mysql_real_escape_string($_POST['autobodyno']) : '';
-        $vin = (isset($_POST['vin'])) ? mysql_real_escape_string($_POST['vin']) : '';
-        $descr = (isset($_POST['descr'])) ? mysql_real_escape_string($_POST['descr']) : '';
-        $review = (isset($_POST['review'])) ? mysql_real_escape_string($_POST['review']) : '';
+        $online = htmlspecialchars ((isset($_POST['online'])) ? mysql_real_escape_string($_POST['online']) : false);
+        $order_title = htmlspecialchars ((isset($_POST['order_title'])) ? mysql_real_escape_string($_POST['order_title']) : '');
+        $nickname = htmlspecialchars ((isset($_POST['nickname'])) ? mysql_real_escape_string($_POST['nickname']) : 'не вказано');
+        $phone = htmlspecialchars ((isset($_POST['phone'])) ? mysql_real_escape_string($_POST['phone']) : '');
+        $email = htmlspecialchars ((isset($_POST['email'])) ? mysql_real_escape_string($_POST['email']) : '');
+        $detail = htmlspecialchars ((isset($_POST['detail'])) ? mysql_real_escape_string($_POST['detail']) : '');
+        $auto = htmlspecialchars ((isset($_POST['auto'])) ? mysql_real_escape_string($_POST['auto']) : '');
+        $autoyear = htmlspecialchars ((isset($_POST['autoyear'])) ? mysql_real_escape_string($_POST['autoyear']) : '');
+        $autobodyno = htmlspecialchars ((isset($_POST['autobodyno'])) ? mysql_real_escape_string($_POST['autobodyno']) : '-');
+        $vin = htmlspecialchars ((isset($_POST['vin'])) ? mysql_real_escape_string($_POST['vin']) : '-');
+        $descr = htmlspecialchars ((isset($_POST['descr'])) ? mysql_real_escape_string($_POST['descr']) : '-');
+        $review = htmlspecialchars ((isset($_POST['review'])) ? mysql_real_escape_string($_POST['review']) : 'клієнт не залишив відгук');
+        if ($review == '') {$review = 'клієнт не залишив відгук';}
         $query = "INSERT
                     INTO `orders`
                     SET
@@ -117,12 +119,13 @@ function mail_to($to, $from, $subj, $text, $files=null){
         $subj = "SAUTO - замовлення #".$order; 
         $cur_date = date('r');
         //$message -> email template
-        include('email.php');
+        if ($online == true) {
+            include('email_online.php');
+        } else {
+            include('email_partner.php');
+        }
 
         $boundary = "--".md5(uniqid(time())); 
-
-//$path_to_file=dirname(__FILE__).DIRECTORY_SEPARATOR."text.txt";
-//$files = array('text.txt' => file_get_contents($path_to_file));
 
         //send email to the order service
 

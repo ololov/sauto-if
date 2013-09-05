@@ -7,6 +7,7 @@
                         <div id="orderFormOnline" class="orderForm">
                             <form id="order" action="ordersave.php" method="POST" enctype="multipart/form-data">
 
+                                <input type="hidden" name="online" value="<?=$online?>">
                                 <input type="hidden" name="action" value="save">
                                 <input type="hidden" name="order_title" value="<?=$order_title?>">
                                 <input type="hidden" name="returnurl" value="<?=$returnurl?>">
@@ -16,7 +17,7 @@
                                 <? include('formorderuserinfo.tmpl'); ?>
                                 <!-- order details (online or partner) -->
                                 <? include($formorderdetails); ?>
-                                <!-- <? #include('formorderreview.tmpl'); ?> -->
+                                <? include('formorderreview.tmpl'); ?>
 
                                 <div class="orderBlock" id="orderSubmitBlock">
                                     <input class="orderSubmit" type="submit" value="Зробити замовлення">
