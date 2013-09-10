@@ -3,14 +3,20 @@
         <div class="content" id="contentHot">
             <? include('socialpanel.tmpl'); ?>
 
-            <header><h1>Акційні пропозиції</h1></header>
+            <header>
+                <h1>Акційні пропозиції</h1>
+                <span>оновлено <? include('promo/promo.dat'); ?></span>
+            </header>
             <div class="scrollBox">
                 <div id="pane1" class="scroll-pane">
                     <? include('contentpromo.tmpl'); ?>
                 </div>
             </div>
 
-            <header><h1>А також</h1></header>
+            <header>
+                <h1>А також</h1>
+                <span>оновлено <? include('promo/promo2.dat'); ?></span>
+            </header>
             <div class="scrollBox">
                 <div id="pane2" class="scroll-pane">
                     <? include('contentpromo2.tmpl'); ?>

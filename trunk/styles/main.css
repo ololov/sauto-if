@@ -138,7 +138,7 @@ table.data tr.odd td {background-color: #f5f5f5;}
 .smallText {font-size: 10px; text-align: right;}
 .promo {width: 260px; padding: 10px 10px 10px 0; float: left;}
 
-h1#adminPanel {width: 1000px; padding: 3px; color: white; background-color: red; float: left; text-align: center;}
+h1#adminPanel {width: 1000px; padding: 3px; color: red; background-color: #eee; float: left; text-align: center;}
 #TextArea {width: 1000px; height: 500px;}
 #sectionAdmin {width: 1010px;}
 
@@ -310,4 +310,53 @@ cursor: pointer;
 
 .addParams, .addReview {
 background-color: #f9f9f9;
+}
+
+.fileList {
+float: left;
+width: 200px;
+padding: 3px;
+height: 180px;
+overflow: auto;
+}
+
+.imagePreview {
+    float: left;
+    padding-left: 20px;
+}
+
+#viewFile {
+    padding: 10px;
+    border: 1px solid #bbb;
+    max-height: 100px;
+    max-width: 280px;
+}
+
+.imagePreview span {
+    padding: 3px;
+}
+
+#editFile {
+    width: 300px;
+}
+
+.uploadFilest {
+    width: 285px;
+    float: right;
+}
+
+.fileManager {
+    display: none;
+    padding: 7px 0;
+}
+
+#contentHelp img {border: 1px solid #bbb; padding: 10px;}
+
+#contentHot header {position: relative;}
+
+#contentHot header span {
+position: absolute;
+bottom: 2px;
+font-size: 11px;
+right: 0;
 }

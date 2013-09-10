@@ -2,6 +2,7 @@
 
         <? 
         $promofile = 'promo/'.$prom.'.htm';
+        $uppromofile = 'promo/'.$prom.'.dat';
         if ($_POST['arch'] == 'yes') {
                 $date = new DateTime(); 
                 $addtext = $date->format('Ymd_His');
@@ -9,7 +10,10 @@
         }
         if ($_POST['save'] == 'yes') {
                 $content = $_POST['promoText'];
-                file_put_contents($promofile, $content); 
+                file_put_contents($promofile, $content);
+                $date = new DateTime(); 
+                $update = $date->format('d.m.Y о H:i');
+                file_put_contents($uppromofile, $update);
         }
         $promocontent = file_get_contents($promofile);
         ?>
@@ -32,6 +36,8 @@
         </script>
 
     <div class="content" id="contentPromoEditor">
+        <? include('filemanager.tmpl'); ?>
+        <h1>Не забувайте зберігати зміни після редагування!!!</h1>
         <form action="<?=$prom?>editor.php" method="post">
             <div class="buttonsMenu">
             <input type="checkbox" name="arch" value="yes">&nbsp;Зробити копію перед збереженням?</td>

@@ -51,6 +51,10 @@ $(document).ready(function() {
 						required: true,
 						range: [1900, 2030]
 						};
+            rules.enginesize = {
+                        required: true,
+                        minlength: 1
+                        };
             rules.uploader_count = "check_files";
 		}
 	};
@@ -72,6 +76,7 @@ $(document).ready(function() {
 			},
 			auto: "будь-ласка, введіть марку авто",
 			autoyear: "будь-ласка, введіть рік випуску авто (4 цифри)",
+            enginesize: "будь-ласка, вкажіть об&apos;єм двигуна",
 			uploader_count: "зачекайте поки завантажаться файли"
 		},
 		errorPlacement: function(error, element) {
@@ -80,6 +85,7 @@ $(document).ready(function() {
 			if (element.attr("name") == "detail") error.insertBefore($("#orderDetailBlock"));
 			if (element.attr("name") == "auto") error.insertBefore($("#orderAutoBlock"));
 			if (element.attr("name") == "autoyear") error.insertBefore($("#orderAutoYearBlock"));
+            if (element.attr("name") == "enginesize") error.insertBefore($("#orderEngineSizeBlock"));
 			if (element.attr("name") == "uploader_count") error.insertBefore($("#orderFile"));
 		}
 	});
