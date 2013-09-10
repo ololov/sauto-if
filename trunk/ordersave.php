@@ -49,6 +49,12 @@ function mail_to($to, $from, $subj, $text, $files=null){
     return mail($to, $subj, $multipart, $headers);
 }
 
+function getDataFieldValue($fieldname, $default = '-') {
+    $result = htmlspecialchars((isset($_POST[$fieldname])) ? mysql_real_escape_string($_POST[$fieldname]) : '');
+    if ($result == '') {$result = '-';}
+    return 
+}
+
     include('global.properties');
     include ('mysql.php');
 
@@ -57,8 +63,21 @@ function mail_to($to, $from, $subj, $text, $files=null){
 
         // store data to database
 
-        $online = htmlspecialchars ((isset($_POST['online'])) ? mysql_real_escape_string($_POST['online']) : false);
-        $order_title = htmlspecialchars ((isset($_POST['order_title'])) ? mysql_real_escape_string($_POST['order_title']) : '');
+        $online = (isset($_POST['online']) ? $_POST['online'] : false;
+        $order_title = getDataFieldValue('order_title');
+        $nickname    = getDataFieldValue('nickname');
+        $order_title = getDataFieldValue('order_title');
+        $order_title = getDataFieldValue('order_title');
+        $order_title = getDataFieldValue('order_title');
+        $order_title = getDataFieldValue('order_title');
+        $order_title = getDataFieldValue('order_title');
+        $order_title = getDataFieldValue('order_title');
+        $order_title = getDataFieldValue('order_title');
+        $order_title = getDataFieldValue('order_title');
+        $order_title = getDataFieldValue('order_title');
+        $order_title = getDataFieldValue('order_title');
+
+
         $nickname = htmlspecialchars ((isset($_POST['nickname'])) ? mysql_real_escape_string($_POST['nickname']) : 'не вказано');
         $phone = htmlspecialchars ((isset($_POST['phone'])) ? mysql_real_escape_string($_POST['phone']) : '');
         $email = htmlspecialchars ((isset($_POST['email'])) ? mysql_real_escape_string($_POST['email']) : '');
