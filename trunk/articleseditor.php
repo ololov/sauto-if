@@ -3,9 +3,9 @@
     include('global.properties');
 
     $title = "SAUTO - Редагування статей";
-    $mainmenuindex = 3;
+    $mainmenuindex = 5;
     $content_tmpl = 'admin_content';
-    $maincontent_tmpl = 'articleeditor';
+    $maincontent_tmpl = 'articleseditor';
 
     include('admin.tmpl');
 

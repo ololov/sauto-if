@@ -1,0 +1,38 @@
+<!-- Articles Editor content template -->
+
+    <?
+        $get_all = true;
+        include('getarticles.php');
+    ?>
+        <div class="content" id="contentArticlesEditor">
+            <form action="articleseditor.php" method="post">
+                <table>
+                    <thead>
+                        <td>файл</td>
+                        <td>заголовок</td>
+                        <td>відображати</td>
+                        <td>&nbsp;</td>
+                    </thead>
+                    <?
+                    $i = 0;
+                    foreach ($articles as $article) { 
+                        ?>
+                            <tr>
+                                <td><?=$article?></td>
+                                <td><input type="text" name="descr" value="<?=$articles_title[$i]?>" /></td>
+                                <td><input type="checkbox" name="arch" <? if ($articles_active[$i] == 1) {echo 'checked';} ?> /></td>
+                                <td><a href="#">редагувати</a></td>
+                            </tr>
+                        <?
+                        $i++;
+                    }
+                    ?>
+                </table>
+                <input type="submit" value="Зберегти зміни">
+            </form>
+            <form action="newarticle.php" method="post">
+                <input type="submit" value="Додати нову статтю">
+            </form>
+        </div>
+
+<!-- Articles Editor content template -->
