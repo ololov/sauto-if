@@ -8,7 +8,10 @@
                 if ($i <= $_side_articles_count - 1) { ?>
                     <article>
                         <div class="itemNewsShort gradient">
-                            <? include('articles/'.$article.'_short.htm'); ?>
+                            <? 
+                            echo '<h2>'.$articles_title[$i].'</h2>';
+                            include('articles/'.$article.'_short.htm');
+                            ?>
                             <a href="articles.php?article=<?=$i?>"><?=$_read_more?></a>
                         </div>
                     </article>

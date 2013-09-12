@@ -20,7 +20,7 @@
                     console.log($(document).width());
                     if ($("#background_css").length <= 0) {
                         console.log('#background_css does not exist, will be added');
-                        $("head").append("<link id='background_css' rel='stylesheet' type='text/css' href='styles/background1.css' />");
+                        $("head").append("<link id='background_css' rel='stylesheet' type='text/css' href='styles/background<?=rand(1,2); ?>.css' />");
                     }
                 } else {
                     console.log($(document).width());

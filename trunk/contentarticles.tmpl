@@ -9,7 +9,10 @@
                     foreach ($articles as $article) { ?>
                         <article>
                             <div class="itemNewsShort2">
-                                <? include('articles/'.trim($article).'_short.htm'); ?>
+                                <? 
+                                echo '<h2>'.$articles_title[$i].'</h2>';
+                                include('articles/'.trim($article).'_short.htm'); 
+                                ?>
                                 <a href="articles.php?article=<?=$i?>"><?=$_read_more?></a>
                             </div>
                         </article>
@@ -23,7 +26,10 @@
                         if ($prev < 0) { $prev = count($articles) - 1; }
                         ?>
                         <div class="pageMenu"><a href="articles.php">Всі статті</a> | Попередня: <a href="articles.php?article=<?=$prev?>"><?=$articles_title[$prev]?></a> | Наступна: <a href="articles.php?article=<?=$next?>"><?=$articles_title[$next]?></a></div>
-                        <? include('articles/'.$articles[$article_index].'.htm'); ?>
+                        <? 
+                        echo '<h2>'.$articles_title[$article_index].'</h2>';
+                        include('articles/'.$articles[$article_index].'.htm');
+                        ?>
                         <div class="pageMenu"><a href="articles.php">Всі статті</a> | Попередня: <a href="articles.php?article=<?=$prev?>"><?=$articles_title[$prev]?></a> | Наступна: <a href="articles.php?article=<?=$next?>"><?=$articles_title[$next]?></a></div>
                 <? } ?>
         </div>
