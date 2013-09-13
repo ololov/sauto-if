@@ -5,7 +5,8 @@
         include('getarticles.php');
     ?>
         <div class="content" id="contentArticlesEditor">
-            <form action="articleseditor.php" method="post">
+            <form action="updatearticles.php" method="post">
+                <input type="hidden" name="count" value="<?=$count?>">
                 <table>
                     <thead>
                         <td>файл</td>
@@ -17,10 +18,11 @@
                     $i = 0;
                     foreach ($articles as $article) { 
                         ?>
+                            <input type="hidden" name="<?='articlefile'.$i?>" value="<?=$article?>">
                             <tr>
                                 <td><?=$article?></td>
-                                <td><input type="text" name="descr" value="<?=$articles_title[$i]?>" /></td>
-                                <td><input type="checkbox" name="arch" <? if ($articles_active[$i] == 1) {echo 'checked';} ?> /></td>
+                                <td><input type="text" name="articletitle<?=$i?>" value="<?=$articles_title[$i]?>" /></td>
+                                <td><input type="checkbox" name="articleactive<?=$i?>" <? if ($articles_active[$i] == 1) {echo 'checked';} ?> value="1"/></td>
                                 <td><a href="#">редагувати</a></td>
                             </tr>
                         <?
