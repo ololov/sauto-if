@@ -1,0 +1,18 @@
+<!-- One Article Editor content template -->
+
+    <?
+        $get_all = true;
+        include('getarticles.php');
+        $articleindex = $_GET['articleindex'];
+    ?>
+        <div class="content" id="contentOneArticleEditor">
+            <form action="updateonearticle.php" method="post">
+                <p>Файл: <strong><?=$articles[$articleindex]?></strong></p>
+                <p>Назва статті: <input type="text" name="articletitle" value="<?=$articles_title[$articleindex]?>" /></p>
+                <p>Стаття активна: <input type="checkbox" name="articleactive" <? if ($articles_active[$articleindex] == 1) {echo 'checked';} ?> value="1"/></p>
+
+                <input type="submit" value="Зберегти зміни">
+            </form>
+        </div>
+
+<!-- OneArticle Editor content template -->

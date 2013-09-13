@@ -5,7 +5,13 @@
     $title = "SAUTO - Редагування статей";
     $mainmenuindex = 5;
     $content_tmpl = 'admin_content';
-    $maincontent_tmpl = 'articleseditor';
+
+    if (isset($_GET['articleindex'])) {
+        $articleindex = $_GET['articleindex'];
+        $maincontent_tmpl = 'onearticleseditor';
+    } else {
+        $maincontent_tmpl = 'articleseditor';
+    }
 
     include('admin.tmpl');
 

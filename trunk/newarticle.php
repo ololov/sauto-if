@@ -10,6 +10,6 @@
     file_put_contents('articles/'.$articlefile.'.htm', 'Повний опис нової статті '.($count+1));
     file_put_contents('articles/'.$articlefile.'_short.htm', 'Скорочений опис нової статті '.($count+1));
 
-    header("Location: http://sauto.if.ua/articleseditor.php");
+    header("Location: http://sauto.if.ua/articleseditor.php?articleindex=0");
 
     ?>

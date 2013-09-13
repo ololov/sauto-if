@@ -23,7 +23,7 @@
                                 <td><?=$article?></td>
                                 <td><input type="text" name="articletitle<?=$i?>" value="<?=$articles_title[$i]?>" /></td>
                                 <td><input type="checkbox" name="articleactive<?=$i?>" <? if ($articles_active[$i] == 1) {echo 'checked';} ?> value="1"/></td>
-                                <td><a href="#">редагувати</a></td>
+                                <td><a href="articleseditor.php?articleindex=<?=$i?>">редагувати</a></td>
                             </tr>
                         <?
                         $i++;
