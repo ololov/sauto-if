@@ -5,14 +5,55 @@
         include('getarticles.php');
         $articleindex = $_GET['articleindex'];
     ?>
-        <div class="content" id="contentOneArticleEditor">
-            <form action="updateonearticle.php" method="post">
-                <p>Файл: <strong><?=$articles[$articleindex]?></strong></p>
-                <p>Назва статті: <input type="text" name="articletitle" value="<?=$articles_title[$articleindex]?>" /></p>
-                <p>Стаття активна: <input type="checkbox" name="articleactive" <? if ($articles_active[$articleindex] == 1) {echo 'checked';} ?> value="1"/></p>
+        <div class="content orderForm" id="contentOneArticleEditor">
+            <form action="updateonearticle.php" method="get">
 
-                <input type="submit" value="Зберегти зміни">
+                <div class="orderBlock">
+                    <h3>Назва та активність статті</h3>
+                </div>
+
+                <div class="orderBlock">
+                    <label for="fileName">
+                        <span class="orderTitle">Файл:</span>
+                    </label>
+                    <input type="text" class="editText" maxlength="50" name="filename" enabled="false" value="<?=$articles[$articleindex]?>">
+                    <div class="orderHelper">Назва файлу статті. Формується автоматично і не може бути змінена</div>
+                </div>
+                <div style="clear: both;"></div>
+
+                <div class="orderBlock">
+                    <label for="editEmail">
+                        <span class="orderTitle">Назва статті:</span>
+                    </label>
+                    <input type="text" class="editText" maxlength="50" name="articletitle" value="<?=$articles_title[$articleindex]?>">
+                    <div class="orderHelper">Назва та заголовок статті</div>
+                </div>
+                <div style="clear: both;"></div>
+
+                <div class="orderBlock">
+                    <label for="editEmail">
+                        <span class="orderTitle">Стаття активна:</span>
+                    </label>
+                    <input type="checkbox" name="articleactive" <? if ($articles_active[$articleindex] == 1) {echo 'checked';} ?> value="1"/>
+                    <div class="orderHelper">Відображати чи не відображати статтю на сайті</div>
+                </div>
+                <div style="clear: both;"></div>
+
+                <div class="orderBlock">
+                    <input class="orderSubmit" type="submit" value="Зберегти зміни">
+                </div>
             </form>
+
+            <? include('filemanager.tmpl'); ?>
+            <? if ($_GET['full'] == 'true') {
+                $textcontent = 'Повний текст статті';
+                echo '<p><strong>Повний текст статті</strong> <a href="#">Скорочений текст статті</a></p>';
+            } else {
+                $textcontent = 'Повний текст статті';
+                echo '<p><a href="#">Повний текст статті</a> <strong>Скорочений текст статті</strong></p>';
+            }
+            include('texteditor.tmpl'); ?>
+
         </div>
 
 <!-- OneArticle Editor content template -->
