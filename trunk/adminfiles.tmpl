@@ -1,0 +1,27 @@
+<!-- Admin Files content template -->
+
+    <div class="content" id="contentAdminFiles">
+                <div class="orderBlock" id="orderFile">
+                                    <label for="editFile">
+                                        <span class="orderTitle">Файли:
+                                        </span>
+                                    </label>
+                                    <div class="orderWrapper">
+                                        <div id="uploader">
+                                            <p>Ваш браузер не підтримує завантаження файлів</p>
+                                        </div>
+                                    </div>
+                                    <div class="orderHelper">Зображення та інші файли для статей, промоцій, тощо</div>
+        </div>
+
+        <!-- uploader script body -->
+        <?php include('uploader.tmpl'); ?>
+        <div style="clear: both;"></div>
+        <a href="" onclick="$('#uploader_start').click(); return false;">Завантажити додані файли</a>
+        
+                <? include('filemanager.tmpl'); ?>
+
+
+    </div>
+
+<!-- Admin Files content template -->

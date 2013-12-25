@@ -1,0 +1,49 @@
+<!-- Promo TextEditor content template -->
+
+        <? 
+        $promofile = 'promo/'.$prom.'.htm';
+        if ($_POST['arch'] == 'yes') {
+                $date = new DateTime(); 
+                $addtext = $date->format('Ymd_His');
+                copy('promo/'.$prom.'.htm', 'promo/archive/'.$addtext.'_'.$prom.'.htm');
+        }
+        if ($_POST['save'] == 'yes') {
+                $content = $_POST['promoText'];
+                file_put_contents($promofile, $content); 
+        }
+        $promocontent = file_get_contents($promofile);
+        ?>
+
+        <script src="/tinymce/tinymce.min.js"></script>
+        <script>
+                tinymce.init({
+                    selector:'#articleTextArea',
+                    plugins: [
+                        "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+                        "searchreplace wordcount visualblocks visualchars code fullscreen",
+                        "insertdatetime media nonbreaking save table contextmenu directionality",
+                        "emoticons template paste textcolor"
+                    ],
+                    toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+                    toolbar2: "print preview media | forecolor backcolor emoticons",
+                    image_advtab: true,
+                    language_url: 'uk.js'
+                });
+        </script>
+
+    <div class="content" id="contentPromoEditor">
+        <form action="<?=$prom?>editor.php" method="post">
+            <div class="buttonsMenu">
+            <input type="checkbox" name="arch" value="yes">&nbsp;Зробити копію перед збереженням?</td>
+            <input type="hidden" name="save" value="yes">
+            <input type="submit" value="Зберегти зміни">
+            </div>
+            <div class="info">
+            <? if ($_POST['arch'] == 'yes') { echo '<span class="info">копію зроблено успішно</span>'; } ?>
+            <? if ($_POST['save'] == 'yes') { echo '<span class="info">зміни збережено</span>'; } ?>
+            </div>
+            <textarea name="promoText" id="articleTextArea"></textarea>
+        </form>
+    </div>
+
+<!-- Promo TextEditor content template -->

@@ -1,0 +1,68 @@
+/* #### less than 1024 #### */
+@media screen and (min-width: 800px){
+body {
+  background: 
+    url(images/bg06.png) 520px 25px no-repeat,
+    url(images/bg15.png) 300px bottom no-repeat;
+}
+}
+
+@media screen and (min-width: 1280px){
+body {
+  background: 
+    url(images/bg06.png) 600px 25px no-repeat,
+    url(images/bg03.png) left top no-repeat, 
+    url(images/bg02.png) left 600px no-repeat, 
+    url(images/hodova.png) right top no-repeat,
+    url(images/bg04.png) right 600px no-repeat,
+    url(images/bg05.png) left bottom no-repeat,
+    url(images/wheels.png) right bottom no-repeat,
+    url(images/bg15.png) 400px bottom no-repeat,
+    url(images/bg08.png) 600px bottom no-repeat;
+}
+}
+
+@media screen and (min-width: 1400px){
+body {
+  background: 
+    url(images/bg06.png) 700px 25px no-repeat,
+    url(images/bg03.png) left top no-repeat, 
+    url(images/bg02.png) left 600px no-repeat, 
+    url(images/hodova.png) right top no-repeat,
+    url(images/bg04.png) right 600px no-repeat,
+    url(images/bg05.png) left bottom no-repeat,
+    url(images/wheels.png) right bottom no-repeat,
+    url(images/bg15.png) 350px bottom no-repeat,
+    url(images/bg08.png) 850px bottom no-repeat;
+}
+}
+
+@media screen and (min-width: 1600px){
+body {
+  background: 
+    url(images/bg06.png) 800px 25px no-repeat,
+    url(images/bg03.png) left top no-repeat, 
+    url(images/bg02.png) left 600px no-repeat, 
+    url(images/hodova.png) right top no-repeat,
+    url(images/bg04.png) right 600px no-repeat,
+    url(images/bg05.png) left bottom no-repeat,
+    url(images/wheels.png) right bottom no-repeat,
+    url(images/bg15.png) 550px bottom no-repeat,
+    url(images/bg08.png) 1000px bottom no-repeat;
+}
+}
+
+@media screen and (min-width: 1600px){
+body {
+  background: 
+    url(images/bg06.png) 900px 25px no-repeat,
+    url(images/bg03.png) left top no-repeat, 
+    url(images/bg02.png) left 600px no-repeat, 
+    url(images/hodova.png) right top no-repeat,
+    url(images/bg04.png) right 600px no-repeat,
+    url(images/bg05.png) left bottom no-repeat,
+    url(images/wheels.png) right bottom no-repeat,
+    url(images/bg15.png) 600px bottom no-repeat,
+    url(images/bg08.png) 1150px bottom no-repeat;
+}
+}
