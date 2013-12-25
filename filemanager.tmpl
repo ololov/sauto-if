@@ -1,0 +1,42 @@
+<!-- File Manager content template -->
+
+    <?
+        $dir = 'images';
+        $files = scandir($dir);
+    ?>
+
+    <div class="hideAddParams" onclick="$('.fileManager').toggle(700);">показати / заховати панель редагування зображень</div>
+    <div class="fileManager" style="display: none;">
+        <div class="fileList">
+            <?
+            for ($i = 0; $i < count($files); $i++) {
+                if (($files[$i] != '.') & ($files[$i] != '..')) {
+                ?>
+                    <a class="fileItem" href="" onclick="$('#viewFile').attr('src', 'images/<?=$files[$i]?>'); $('#editFile').val('images/<?=$files[$i]?>'); return false;"><?=$files[$i]?></a></br>
+                <?
+                }
+            }
+            ?>
+        </div>
+        <div class="imagePreview">
+            <img id="viewFile" src="images/<?=$files[2]?>" />
+            <div style="clear: both;"></div>
+            <span>Джерело (скопіюйте для вставки):</span><br/>
+            <input type="text" id="editFile" value="images/<?=$files[2]?>" />
+        </div>
+        <div class="uploadFilest">
+                                    <div class="orderWrapper">
+                                        <div id="uploader">
+                                            <p>Ваш браузер не підтримує завантаження файлів</p>
+                                        </div>
+                                    </div>
+
+            <!-- uploader script body -->
+            <?php include('uploader.tmpl'); ?>
+            <a href="" onclick="$('#uploader_start').click(); return false;">Завантажити додані файли</a>
+        </div>
+        <span class="helper">Після завантаження нових зображень необхідно оновити сторінку, щоб вони появились у списку</span>
+    </div>
+    <div style="clear: both;"></div>
+
+<!-- File Manager content template -->

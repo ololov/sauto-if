@@ -1,0 +1,22 @@
+<!-- Order result block template -->
+
+        <div id="orederResult">
+                        <? if ($result == 'error') { ?>
+                            <div class="error">
+                                <p>При оформленні замовлення трапились помилка:</p>
+                                <p><strong><?=$error?></strong></p>
+                                <p>Спробуйте ще раз. Якщо ситуація повториться, то повідомте про це нас по телефону, або напишіть листа на sauto@mail.ua</p>
+                            </div>
+                        <? } 
+                        if ($result == 'ok') { ?>
+                            <div class="ok"><h3>Дякуємо за замовлення!</h3>
+                            <p>Унікальний номер вашого замовлення <strong><?=$order_title.'-'.$order_id?></strong>. Запам&apos;ятайте або запишіть його.</p>
+                            <p>Ми скоро звами зв&apos;яжемося для уточнення всіх деталей замовлення.</p>
+                            <p><strong>Деталі замовлення:</strong></p>
+                            </div>
+
+                        <? } ?>
+                    <p><a href="<?=$returnurl?>.php">Зробити нове замовлення</a></p>
+        </div>
+
+<!-- Order result block template -->

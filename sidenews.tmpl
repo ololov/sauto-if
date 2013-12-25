@@ -1,0 +1,25 @@
+<!-- Side News (5 last articles) -->
+
+    <aside>
+        <div id="sideNews">
+            <span class="sideHeader">Цікаво знати</span>
+            <? $i = 0;
+            foreach ($articles as $article) { 
+                if ($i <= $_side_articles_count - 1) { ?>
+                    <article>
+                        <div class="itemNewsShort gradient">
+                            <? 
+                            echo '<h2>'.$articles_title[$i].'</h2>';
+                            include('articles/'.$article.'_short.htm');
+                            ?>
+                            <a href="articles.php?article=<?=$i?>"><?=$_read_more?></a>
+                        </div>
+                    </article>
+                <? $i++;
+                } ?>
+            <? } ?>
+            <a href="articles.php">всі статті</a>
+        </div>
+    </aside>
+
+<!-- Side News (5 last articles)  -->

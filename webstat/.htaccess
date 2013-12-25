@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "/www/sauto.if.ua/webstat"
+AuthUserFile /var/www/sauto/data/etc/2524706.passwd
+DirectoryIndex index.html
+<Limit GET POST>
+	require valid-user
+</Limit>

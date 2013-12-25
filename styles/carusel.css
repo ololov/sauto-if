@@ -1,0 +1,35 @@
+.sliderkit {
+width: 1010px;
+height: 60px;
+padding: 1px;
+background-color: #eee;
+opacity: 0.8;
+}
+
+.sliderkit-nav {
+width: 1010px;
+padding: 0;
+}
+
+.sliderkit-nav-btn {
+position: absolute;
+top: 0;
+display: none;
+}
+
+.sliderkit-nav-prev {
+left: 0;
+}
+
+.sliderkit-nav-next {
+right: 0;
+}
+
+.sliderkit-nav-clip ul li {
+width: 60px;
+height: 60px;
+padding: 0 1px;
+}
+
+.sliderkit-nav-clip ul li a {opacity: 0.5;}
+.sliderkit-nav-clip ul li a:hover {opacity: 1;}
