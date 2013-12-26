@@ -7,16 +7,21 @@ body {height: 100%; font-family: Verdana, Arial; margin: 0; padding: 0; font-siz
 #logoMain p.l2 {margin: 0; padding: 0 0 12px 600px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
 #logoMain p.l3 {margin: 0; padding: 0 0 0 700px; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); font-size: 32px; color: #555;}
 
-.navMenu .menu {float: left; padding: 3px 0 3px 0; opacity: 0.6; font-size: 14px; margin-right: 20px; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: transparent;}
+.navMenu .menu {float: left; padding: 3px 0 3px 0; opacity: 0.6; font-size: 14px; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: transparent;}
 .navMenu .menu:hover {cursor: pointer; opacity: 1.0;}
-.navMenu .menuSelected {opacity: 1.0; font-weight: bold; background-color: white; border-bottom-color: #e74c3c;}
+.navMenu .menuSelected {opacity: 1.0; font-weight: bold; border-bottom-color: #e74c3c;}
 .navMenu a.menu, .navMenu a.menu:focus, .navMenu a.menu:active, .navMenu a.menu:hover {text-decoration: none; text-align: center; font-weight: bold;}
 .navMenu a.menu:hover {text-decoration: none; border-bottom-color: #e74c3c;}
 .navMenu {float: left; width: 1012px;}
 
-#subMenu .menu {float: left; padding: 3px 0 3px 0; opacity: 0.6; font-size: 14px; margin-right: 20px; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: transparent;}
+.m-w-10 {width: 10%;}
+.m-w-15 {width: 15%;}
+.m-w-25 {width: 25%;}
+.m-w-100 {width: 100%;}
+
+#subMenu .menu {float: left; padding: 3px 0 3px 0; opacity: 0.6; font-size: 14px; border-bottom-style: solid; border-bottom-width: 5px; border-bottom-color: transparent;}
 #subMenu .menu:hover {cursor: pointer; opacity: 1.0;}
-#subMenu .menuSelected {opacity: 1.0; font-weight: bold; background-color: white; border-bottom-color: #e74c3c;}
+#subMenu .menuSelected {opacity: 1.0; font-weight: bold; border-bottom-color: #e74c3c;}
 #subMenu a.menu, #subMenu a.menu:focus, #subMenu a.menu:active, #subMenu a.menu:hover {text-decoration: none; text-align: center; font-weight: bold; margin-right: 0; margin-left: 20px; border-bottom-width: 2px;}
 #subMenu a.menu:hover {text-decoration: none; border-bottom-color: #e74c3c;}
 #subMenu {float: right; margin-bottom: 12px; margin-top: 3px;}
@@ -26,6 +31,8 @@ body {height: 100%; font-family: Verdana, Arial; margin: 0; padding: 0; font-siz
 #sideAdv {float: left; width: 210px; padding: 15px 5px 5px 5px; border-right: dotted 1px #95a5a6; background: url("images/accum.png") no-repeat 120px 60px #ecf0f1;}
 #sideNews {padding: 12px 10px 15px 10px; bborder: dotted 1px #95a5a6; border-radius: 6px; background: url("images/engine2.png") no-repeat 0 0; font-size: 12px; margin: 0 5px 10px 5px;}
 #sideNews .date {font-weight: bold; display: block; padding-bottom: 3px;}
+
+#menuBlock2 #navDropdown {display: none;}
 
 a, a:focus, a:active, a:hover {text-decoration: underline; color: #2b1b17;}
 a:hover {text-decoration: none; color: #b1b1b1;}
@@ -44,10 +51,11 @@ h3 {font-size: 14px; font-weight: bold;}
 
 #contentPartners a {display: block; width: 140px; margin-bottom: 12px; text-indent: -9999px; border-bottom: 1px dotted #ddd; padding-bottom: 6px;}
 
-#sidePartners {
+#sidePartners, #sideTire {
 border: solid 1px #ddd;
 border-radius: 6px;
 padding: 5px 7px;
+margin-bottom: 20px;
 }
 
 span.sideHeader {text-align: center;
@@ -123,6 +131,7 @@ margin-bottom: 20px;}
 #advMotogama {background: url("images/motogama.jpg") no-repeat; height: 30px;}
 #advAutoGietka {background: url("images/autogietka.gif") no-repeat; height: 27px;}
 #advEMoto {background: url("images/emoto.png") no-repeat; height: 27px;}
+#advTire {background: url("images/tire.png") no-repeat; height: 127px;}
 
 #sectionMain h1 {font-size: 20px; padding-top: 8px;}
 
@@ -367,3 +376,28 @@ right: 0;
 
 .data thead {font-weight: bold;}
 table.data {font-size: 12px;}
+
+.loader {
+    text-indent: -9999px;
+    width: 36px;
+    height: 36px;
+    background: url("images/loading_icon.gif") 0 0 no-repeat;
+    margin: 0 auto;
+    float: left;
+}
+
+.hiden {
+    display: none;
+}
+
+#orderHeader {
+text-align: center;
+color: white;
+display: block;
+font-size: 12px;
+padding: 3px;
+background-color: #e74c3c;
+margin-top: 5px;
+font-weight: bold;
+font-size: 14px;
+}

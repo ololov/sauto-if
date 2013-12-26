@@ -1,18 +1,24 @@
 <!-- Main menu template -->
 
             <nav class="navMenu" id="menuBlock1">
-                <a class="menu <? if ($mainmenuindex == 3) { echo 'menuSelected'; } ?>" id="menuHot" href="index.php">Головна</a>
-                <a class="menu <? if ($mainmenuindex == 1) { echo 'menuSelected'; } ?>" id="menuAbout" href="about.php">Про нас</a>
-                <a class="menu <? if ($mainmenuindex == 2) { echo 'menuSelected'; } ?>" id="menuShop" href="shop.php">Магазин</a>
-                <a class="menu <? if ($mainmenuindex == 6) { echo 'menuSelected'; } ?>" id="menuCatalog" href="catalog.php">Каталог запчастин</a>
-                <a class="menu <? if ($mainmenuindex == 4) { echo 'menuSelected'; } ?>" id="menuDelivery" href="delivery.php">Оплата і доставка</a>
-                <a class="menu <? if ($mainmenuindex == 5) { echo 'menuSelected'; } ?>" id="menuArticles" href="articles.php">Статті</a>
+                <a class="menu m-w-15 <? if ($mainmenuindex == 3) { echo 'menuSelected'; } ?>" id="menuHot" href="index.php">Головна</a>
+                <a class="menu m-w-15 <? if ($mainmenuindex == 1) { echo 'menuSelected'; } ?>" id="menuAbout" href="about.php">Про нас</a>
+                <a class="menu m-w-15 <? if ($mainmenuindex == 2) { echo 'menuSelected'; } ?>" id="menuShop" href="shop.php">Магазин</a>
+                <a class="menu m-w-15 <? if ($mainmenuindex == 6) { echo 'menuSelected'; } ?>" id="menuCatalog" href="catalog.php">Каталог запчастин</a>
+                <a class="menu m-w-15 <? if ($mainmenuindex == 7) { echo 'menuSelected'; } ?>" id="menuShop" href="tire.php">Шиномонтаж</a>
+                <a class="menu m-w-15 <? if ($mainmenuindex == 4) { echo 'menuSelected'; } ?>" id="menuDelivery" href="delivery.php">Оплата і доставка</a>
+                <a class="menu m-w-10 <? if ($mainmenuindex == 5) { echo 'menuSelected'; } ?>" id="menuArticles" href="articles.php">Статті</a>
             </nav>
             <nav class="navMenu" id="menuBlock2">
-                <a class="menu <? if ($mainmenuindex == 10) { echo 'menuSelected'; } ?>" id="menuOrder" href="orderonline.php">Замовлення on-line</a>
-                <a class="menu <? if ($mainmenuindex == 20) { echo 'menuSelected'; } ?>" id="menuIcars" href="ordericars.php">Замовлення iCars</a>
-                <a class="menu <? if ($mainmenuindex == 30) { echo 'menuSelected'; } ?>" id="menuPolcar" href="orderpolcar.php">Замовлення Polcar</a>
-                <a class="menu <? if ($mainmenuindex == 40) { echo 'menuSelected'; } ?>" id="menuAutopartner" href="orderautopartner.php">Замовлення Autopartner</a>
+                <div class="dropDown" onmouseover="document.getElementById('navDropdown').style.display = 'block';" onmouseout="document.getElementById('navDropdown').style.display = 'none';">
+                    <div id="orderHeader">Замовлення</div>
+                    <nav id="navDropdown">
+                        <a class="menu m-w-25 <? if ($mainmenuindex == 10) { echo 'menuSelected'; } ?>" id="menuOrder" href="orderonline.php">Замовлення online</a>
+                        <a class="menu m-w-25 <? if ($mainmenuindex == 20) { echo 'menuSelected'; } ?>" id="menuOrder" href="ordericars.php">Замовлення iCars</a>
+                        <a class="menu m-w-25 <? if ($mainmenuindex == 30) { echo 'menuSelected'; } ?>" id="menuOrder" href="orderpolcar.php">Замовлення Polcar</a>
+                        <a class="menu m-w-25 <? if ($mainmenuindex == 40) { echo 'menuSelected'; } ?>" id="menuOrder" href="orderautopartner.php">Замовлення Autopartner</a>
+                    </nav>
+                </div>
             </nav>
 
 <!-- Main menu template -->
